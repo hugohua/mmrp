@@ -1,0 +1,584 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新增组件</title>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../css/external.css?v=03020920">
+<script src="../js/libs/sea.js"></script>
+<style type="text/css">
+.js_setting{display:none;}
+#js_mod_setting .span3{display:none;}
+#js_mod_setting .controls{margin-bottom:10px;}
+
+</style>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+<div class="container-fluid">
+	<div class="row-fluid">
+			
+		<form class="form-horizontal">
+			<fieldset>
+				<legend>新增模块组件</legend>
+				<!-- 模块基础信息 S -->
+                <div id="js_mod_base">
+                	<div class="control-group">
+                        <label class="control-label" for="title">* 模块名称</label>
+                        <div class="controls">
+                            <input type="text" id="js_mod_name" data-validate="required" placeholder="请输入模块名称..."><span class="help-inline" style="display:none">名称将显示在模块列表上，方便区分模块</span>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="title">* 模块英文名</label>
+                        <div class="controls">
+                            <input type="text" id="js_mod_type" data-validate="required" placeholder="请输入英文名，如：mod_list_pic"><span class="help-inline" style="display:none">方便本系统区分模块，建议用字母、数字、下划线等标识，请勿使用中文或特殊字符。如：mod_list_pic</span>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group" style="display:none;">
+                        <label class="control-label" for="inlineCheckboxes">样式基类</label>
+                        <div id="js_mod_base_list" class="controls">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="select01">* 模块分类</label>
+                        <div class="controls">
+                          <select id="js_mod_category" class="span3" >
+                            <!--<option value="1">基础模块</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>-->
+                          </select>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="select01">* 数据结构类型</label>
+                        <div class="controls">
+                          <select id="js_mod_data_type" class="span3" >
+                            <option value="0">JSON格式数据</option>
+                            <option value="1">HTML文本数据</option>
+                          </select>
+                        </div>
+                    </div>
+    
+                    <div class="control-group">
+                        <label class="control-label" for="html">* HTML展示结构</label>
+                        <div class="controls">
+                            <textarea id="js_mod_html" name="html" data-validate="required" placeholder="用于展示在操作区域的静态结构"></textarea><span class="help-inline" style="display:none">用于展示在操作区域的静态结构</span>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="html">HTML数据结构</label>
+                        <div class="controls">
+                            <textarea id="js_mod_html_template" placeholder="用于与数据整合的html结构，可不填"></textarea>
+                        </div>
+                    </div>
+    
+                    <div class="control-group">
+                        <label class="control-label" for="css">CSS</label>
+                        <div class="controls">
+                            <textarea id="js_mod_css" name="css" placeholder="模块组件所需的css样式"></textarea>
+                        </div>
+                    </div>
+                    <div class="control-group" style="position:absolute;left:-999px">
+                        <label class="control-label" for="js">javascript</label>
+                        <div class="controls">
+                            <textarea id="js_mod_js" name="js" placeholder="模块组件所需的javascript"></textarea>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="fileInput">* 模块缩略图</label>
+                        <div class="controls">
+                            <div id="js_file_uploader" class="upload_img"></div>
+                            <input class="input-file" id="js_mod_thumbnail" type="hidden">
+                            <img src="" id="js_mod_imgshow" style="display:none;" />
+                        </div>
+                    </div>
+                </div>
+				<!-- 模块基础信息 E -->
+                
+                <!-- 样式切换 S -->
+                <div id="js_switch_class">
+                    <div class="control-group">
+                        <label class="control-label">样式切换1</label>
+                        <div class="controls">
+                        	<input type="hidden" class="js_s_group" value="js_switch_1" />
+                            <input type="text" placeholder="名称" class="input-small js_s_name" />
+                            <input type="text" placeholder="新增的类名" class="js_s_add" />
+                            <input type="text" placeholder="移除的类名" class="js_s_remove" />
+                            <button type="button" class="btn js_s_append">新增一行</button>
+                        </div>
+                        <div class="controls">
+                        	<input type="hidden" class="js_s_group" value="js_switch_1" />
+                            <input type="text" placeholder="名称" class="input-small js_s_name" />
+                            <input type="text" placeholder="新增的类名" class="js_s_add" />
+                            <input type="text" placeholder="移除的类名" class="js_s_remove" />
+                            <button type="button" class="btn js_s_append">新增一行</button>
+                        </div>
+                        <div class="controls">
+                        	<input type="hidden" class="js_s_group" value="js_switch_1" />
+                            <input type="text" placeholder="名称" class="input-small js_s_name" />
+                            <input type="text" placeholder="新增的类名" class="js_s_add" />
+                            <input type="text" placeholder="移除的类名" class="js_s_remove" />
+                            <button type="button" class="btn js_s_append">新增一行</button>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">样式切换2</label>
+                        <div class="controls">
+                        	<input type="hidden" class="js_s_group" value="js_switch_2" />
+                            <input type="text" placeholder="名称" class="input-small js_s_name" />
+                            <input type="text" placeholder="新增的类名" class="js_s_add" />
+                            <input type="text" placeholder="移除的类名" class="js_s_remove" />
+                            <button type="button" class="btn js_s_append">新增一行</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <script id="js_switch_template" type="text/template">
+					{{#data}}
+                	<div class="control-group">
+                        <label class="control-label">样式切换</label>
+						{{#group}}
+                        <div class="controls">
+                        	<input type="hidden" class="js_s_group" value="{{group}}" />
+                            <input type="text" placeholder="名称" class="input-small js_s_name" value="{{name}}" />
+                            <input type="text" placeholder="新增的类名" class="js_s_add" value="{{add}}" />
+                            <input type="text" placeholder="移除的类名" class="js_s_remove" value="{{remove}}" />
+                            <button type="button" class="btn js_s_append">新增一行</button>
+                        </div>
+						{{/group}}
+						{{^group}}
+                        <div class="controls">
+                        	<input type="hidden" class="js_s_group" value="" />
+                            <input type="text" placeholder="名称" class="input-small js_s_name" value="" />
+                            <input type="text" placeholder="新增的类名" class="js_s_add" value="" />
+                            <input type="text" placeholder="移除的类名" class="js_s_remove" value="" />
+                            <button type="button" class="btn js_s_append">新增一行</button>
+                        </div>
+						{{/group}}
+                    </div>
+					{{/data}}
+                </script>
+                <!-- 样式切换 E -->
+                    
+                <div id="js_mod_setting" class="control-group">
+                <label class="control-label" for="optionsCheckboxList">样式设置</label>
+                
+                  <!-- 基本信息 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" checked value="1">
+                基本设置
+                      </label>
+                      <input type="text" id="js_mod_name_1" class="span3" placeholder="基本信息">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                  <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="2">
+                文本(整体)设置
+                      </label>
+                      <input type="text"  id="js_mod_name_2"class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                  <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="3">
+                文本(选中)设置
+                      </label>
+                      <input type="text"  id="js_mod_name_3"class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                  <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="7">
+                        后台数据源
+                      </label>
+                      <input type="text" id="js_mod_name_7" class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                   <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="12">
+                        链接设置【m_link】
+                      </label>
+                      <input type="text" id="js_mod_name_12" class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                 
+                  
+                   <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="8">
+                        数据增减
+                      </label>
+                      <input type="text" id="js_mod_name_8" class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                  <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="10">
+                        列表外间距(margin)【m_ma】
+                      </label>
+                      <input type="text" id="js_mod_name_10" class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                  <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="15">
+                        列表内边距(padding)【m_pa】
+                      </label>
+                      <input type="text" id="js_mod_name_15" class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                   <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="11">
+                        图片大小设置【m_img】
+                      </label>
+                      <input type="text" id="js_mod_name_11" class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                   <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="16">
+                        容器大小设置【m_liimg】
+                      </label>
+                      <input type="text"  id="js_mod_name_16"class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                 
+                  
+                  <!-- 单个样式设置 S  -->
+                  <div class="controls js_controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="js_mod_checkbox" value="14">
+                        文本设置【m_txt】
+                      </label>
+                      <input type="text"  id="js_mod_name_14"class="span3" placeholder="设置标题...">
+                  </div>
+                  <!-- 单个样式设置 E  -->
+                  
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" id="js_mod_submit_btn" class="btn btn-primary">新增组件</button>
+                    <button type="submit" id="js_mod_edit_btn" style="display:none" class="btn btn-primary">修改组件</button>
+                </div>               
+            
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+
+<section class="mod_gb_settings" style="width:615px;background:#fff;margin:18px auto 50px;padding: 7px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid RGBA(12,34,55,0.9); position:fixed; top:100px; right:20px;">
+        
+    <div class="dialog_box">
+        <div class="dialog_main">
+            <h3>[<span id="js_type_s">段落</span>]  [ID：<span id="js_class_name_s">mod_style_4</span>] 属性设置</h3>
+            <div class="mod_gb_settings">
+                <div id="js_mod_setting">
+                    <!-- .js_mod_setting 是属性设置类，加上这个类名则输入内容时，会实时更新 -->
+                    <fieldset id="js_set_1" class="js_mod_setting">
+                        <legend class="c_tx1">基本设置</legend>
+                        <ul>
+                            <li class="clearfix" style="display:none;">
+                                <label>
+                                    <strong>ID</strong>
+                                    <input type="text" placeholder="命名唯一性" class="int_txt" id="js_class_name">
+                               </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong>宽度</strong>
+                                    <input type="number" id="js_width" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                                <label>
+                                    <strong>高度</strong>
+                                    <input type="number" id="js_height" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                                <label>
+                                    <strong>X坐标</strong>
+                                    <input type="number" id="js_left_pos" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                                <label>
+                                    <strong>Y坐标</strong>
+                                    <input type="number" id="js_top_pos" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                            </li>
+                        </ul>
+                        <input type="hidden" id="js_type" value="base_p">
+                    </fieldset>
+                    
+                    <fieldset id="js_set_2" class="js_mod_setting" style="display:none;">
+                        <legend class="c_tx1">文本(整体)设置</legend>
+
+                            <label class="bg_input_1 bg_input_current" style="display:none;">
+                                <p class="ico_alignright"><input type="radio" name="js_txtAlign" value="inherit" checked="checked"><span class="style_show_1">无</span></p>
+                            </label>
+                            &nbsp;&nbsp;
+                            <label>
+                                <select id="js_font_family">
+                                    <option value="">默认字体</option>
+                                    <option value="'Microsoft YaHei','SimHei'">微软雅黑</option>
+                                    <option value="SimSun">宋体</option>
+                                </select>
+                            </label>
+                            <label title="所有文字的大小，默认是12px">
+                                <input type="number" id="js_fontSize" min="12" max="48" step="1" value="12" class="int_number_2"><span class="c_tx1">px</span>
+                            </label>
+                            &nbsp;&nbsp;
+                            <label title="所有文字的行高，默认是18px">
+                                <strong>行高</strong>
+                                <input type="number" id="js_lineHeight" min="12" max="100" step="1" value="18" class="int_number_2"><span class="c_tx1">px</span>
+                            </label>
+                            &nbsp;&nbsp;
+                            <label class="bg_input_1" title="颜色">
+                                <input type="text" id="js_colorNum" class="color">
+                            </label>
+                            <label class="bg_input_1 bg_input_current">
+                                <p class="ico_fontbold"><input type="checkbox" id="js_fontWeight"><span class="style_show_1">B</span></p>
+                            </label>
+                            <label class="bg_input_1">
+                                <p class="ico_underline"><input type="checkbox" id="js_txtUnderline"><span class="style_show_1">U</span></p>
+                            </label>
+                            <div class="btn_group">
+                                <label class="bg_input_1" title="居左">
+                                    <p class="ico_alignleft"><input type="radio" name="js_txtAlign" value="left"><span class="txt_left"></span></p>
+                                </label>
+                                <label class="bg_input_1" title="居中">
+                                    <p class="ico_aligncenter"><input type="radio" name="js_txtAlign" value="center"><span class="txt_center"></span></p>
+                                </label>
+                                <label class="bg_input_1" title="居右">
+                                    <p class="ico_alignright"><input type="radio" name="js_txtAlign" value="right"><span class="txt_right"></span></p>
+                                </label>
+                            </div>
+
+                    </fieldset>
+                    
+                    <!-- 文本(选中)设置_S -->
+                    <fieldset id="js_set_3" class="js_setting" style="display:none; ">
+                        <legend class="c_tx1">文本(选中)设置</legend>
+                        <div id="editor-toolbar" class="fresheditor-toolbar">
+                            <div id="toolbarPosition" class="clear"></div>
+                            <div class="buttons toolbarSection">
+                                <a href="javascript:;" class="btn toolbar_bold" title="粗体 (Ctrl+B)">B</a>
+                                <a href="javascript:;" class="btn toolbar_underline" title="下划线 (Ctrl+U)">U</a><a href="javascript:;" title="清除格式 (Ctrl+M)" class="btn">&minus;</a>
+                                <a href="javascript:;" title="添加链接(当前页面打开)" class="btn toolbar_link">@</a>
+                                <a href="javascript:;" title="添加链接(新页面打开)" class="btn toolbar_link_target">@N</a>
+                                <a href="javascript:;" title="文字颜色" class="btn toolbar_fg"><input type="text" placeholder="颜色" class="input_color"/></a>
+                                <a id="js_source_edit_btn" data-toggle="modal" href="#js_source_edit_pop" title="开启富文本在线编辑功能" class="btn" >源码编辑</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- 文本(选中)设置_E -->
+                    
+                    <fieldset id="js_set_7" class="js_setting" style="display:none; ">
+                        <legend class="c_tx1">后台数据源</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">Item ID</strong>
+                                    <input type="number" id="js_api_input" class="int_number" placeholder="ID or URL">
+                                </label>
+        
+                            </li>
+                            <li id="js_real_api_cont" class="clearfix">
+                                <label>
+                                    <strong class="pri">真实API</strong>
+                                    <textarea id="js_api_url_input" class="tta_txt"></textarea>
+                                </label>
+                                <button id="js_api_btn" type="button" class="btn">获取数据</button>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    
+                    <!-- 原型数据增减 start -->
+                    <fieldset id="js_set_8" class="js_setting">
+                        <legend class="c_tx1">数据增减</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <button type="button" class="bg_input_1" id="js_append_data_btn">增加</button>&nbsp;&nbsp;
+                                <button type="button" class="bg_input_1" id="js_remove_data_btn">减少</button>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- 原型数据增减 start -->
+                    
+                    <!-- #js_mod_style 样式设置 -->
+                    <div id="js_mod_style">
+                    <fieldset id="js_set_10" class="js_setting" data-class="m_ma" style="display:none; ">
+                    <legend class="c_tx1">列表间距(margin)</legend>
+                    <ul>
+                        <li class="clearfix">
+                            <label>
+                                <strong>上</strong>
+                                <input type="number" id="js_margin_top" data-css="margin-top" min="1" max="1002" step="1" class="int_number">
+                            </label>
+                            <label>
+                                <strong>右</strong>
+                                <input type="number" id="js_margin_right" data-css="margin-right" min="1" max="1002" step="1" class="int_number">
+                            </label>
+                            <label>
+                                <strong>下</strong>
+                                <input type="number" id="js_margin_bottom" data-css="margin-bottom" min="1" max="1002" step="1" class="int_number">
+                            </label>
+                            <label>
+                                <strong>左</strong>
+                                <input type="number" id="js_margin_left" data-css="margin-left" min="1" max="1002" step="1" class="int_number">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                <fieldset id="js_set_15" class="js_setting" data-class="m_pa" style="display:none; ">
+                    <legend class="c_tx1">列表间距(padding)</legend>
+                    <ul>
+                        <li class="clearfix">
+                            <label>
+                                <strong>上</strong>
+                                <input type="number" id="js_padding_top" data-css="padding-top" min="1" max="1002" step="1" class="int_number">
+                            </label>
+                            <label>
+                                <strong>右</strong>
+                                <input type="number" id="js_padding_right" data-css="padding-right" min="1" max="1002" step="1" class="int_number" >
+                            </label>
+                            <label>
+                                <strong>下</strong>
+                                <input type="number" id="js_padding_bottom" data-css="padding-bottom" min="1" max="1002" step="1" class="int_number">
+                            </label>
+                            <label>
+                                <strong>左</strong>
+                                <input type="number" id="js_padding_left" data-css="padding-left" min="1" max="1002" step="1" class="int_number">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                <fieldset id="js_set_11" data-class="m_img" class="js_setting" style="display:none; ">
+                    <legend class="c_tx1">图片大小设置</legend>
+                    <ul>
+                        <li class="clearfix">
+                            <label>
+                                <strong>宽度</strong>
+                                <input type="number" id="js_img_width" data-css="width" min="10" max="1002" step="1" class="int_number">
+                            </label>
+                            <label>
+                                <strong>高度</strong>
+                                <input type="number" id="js_img_height" data-css="height" min="10" max="1002" step="1" class="int_number">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                <fieldset id="js_set_16" data-class="m_li" class="js_setting" style="display:none; ">
+                    <legend class="c_tx1">容器大小设置</legend>
+                    <ul>
+                        <li class="clearfix">
+                            <label>
+                                <strong>宽度</strong>
+                                <input type="number" id="js_li_width" data-css="width" min="1" max="1002" step="1" class="int_number" />
+                            </label>
+                            <label>
+                                <strong>高度</strong>
+                                <input type="number" id="js_li_height" data-css="height" min="1" max="1002" step="1" class="int_number" />
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                <fieldset id="js_set_12" class="js_setting" data-class="m_link" style="display:none; ">
+                    <legend class="c_tx1">链接设置</legend>
+                    <ul>
+                        <li class="clearfix">
+                            <label>
+                                <strong>颜色</strong>
+                                <input  type="text" id="js_list_link_color" class="int_number">
+                            </label>
+                            <label>
+                                <strong>大小</strong>
+								<input type="number" id="js_link_size" data-css="width" min="10" max="1002" step="1" class="int_number">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                
+                <fieldset id="js_set_14" class="js_setting" style="display:none; ">
+                    <legend class="c_tx1">文本设置</legend>
+                    <ul>
+                        <li class="clearfix">
+                            <label>
+                                <strong>颜色</strong>
+                                <input type="text" id="js_text_color" value="" class="int_number">
+                            </label>
+                            <label>
+                                <strong>大小</strong>
+                                <input type="number" id="js_text_size" data-css="width" min="10" max="1002" step="1" class="int_number">
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                    </div>
+                    <!--#js_mod_style -->
+                    
+                </div>
+               
+                <div class="dialog_op"><button id="js_close_panel" class="bg_input_1">确认并关闭</button></div>
+           
+        </div>
+    </div><!--  -->
+</div>
+            </section>
+
+</body>
+<script id="js_mod_base_tmpl" type="text/template">
+{{#value}}
+  <label class="checkbox inline">
+	<input type="checkbox" value="{{id}}" name="js_mod_base_style_ids">{{mod_base_style_name}}
+  </label>
+ {{/value}}  
+</script>
+<script id="js_cate_tmpl" type="text/template">
+{{#value}}
+<option value="{{cate_id}}">{{cate_name}}</option>
+{{/value}}
+</script>
+<script>
+seajs.use('../js/mmrp.main',function(main){
+	main.load('mmrp.admin.module');
+})
+</script>
+</html>

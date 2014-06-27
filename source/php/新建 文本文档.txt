@@ -1,0 +1,6 @@
+调用的时候，Tencent_RtxSender::send(.....); 就可以了
+
+jamesqin
+
+
+allenzhao

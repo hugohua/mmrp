@@ -1,0 +1,70 @@
+.modal{width:620px;margin-left:-310px;}
+.modal fieldset{padding:4px 10px 10px;border:1px solid #ccc;}
+.modal legend{width:auto;font-size:100%;font-weight:800;margin:0;padding:0 10px;border:0 none;color:#333;}
+.modal fieldset ul{margin:0 0 -10px;}
+.modal fieldset li{margin-bottom:10px;min-height:25px;}
+.modal fieldset .w_two{float:left;width:50%;}
+.modal fieldset label{float:left;margin-right:10px;}
+.modal fieldset strong {float:left;width: auto;height: 24px;line-height:24px;padding-right:6px;text-align: right;font-weight: normal;}
+.modal fieldset strong.pri{width:60px;}
+.modal fieldset strong.pri90{width:90px;}
+.modal fieldset strong.pri150{width:150px;}
+
+/*表单*/
+.modal select{width:auto;height:26px;line-height:26px;margin:0;padding:4px;}
+.modal input{margin:0;padding:2px;height: 20px;}
+.modal .int_number {width: 60px;}
+.modal .int_number_2 {width: 34px;}
+.modal .input_color{width:54px;}
+.modal .btn input{display:none;}
+.modal .btn .input_color{display:inline-block;height:13px;line-height:13px;padding:0 2px;}
+.modal .btn-group{float:left;margin:0 0 0 -1px;}
+.modal .btn-group label{margin:0;}
+.modal .txt_left{padding:7px;background:url(../admin/img/bg_btn.png) 0 10px no-repeat;}
+.modal .txt_center{padding:7px;background:url(../admin/img/bg_btn.png) -15px 10px no-repeat;}
+.modal .txt_right{padding:6px;background:url(../admin/img/bg_btn.png) -30px 9px no-repeat;}
+.modal .tta_txt{width:350px;height:51px;}
+
+/*背景上传 url */
+.upload_tabs{margin:5px 10px 10px;border-bottom:1px solid #DCDFE4;}
+.upload_tabs a{padding:5px 15px; margin:0 5px; border:1px solid #DCDFE4; display:block; float:left; position:relative; top:1px;}
+.upload_tabs a.selected{color:#C00; font-weight:700; border-bottom:1px solid #fff;}
+.upload_remote li{list-style:inside decimal}
+.modal  .upload_remote li label{display:inline;float:none;}
+.upload_remote li .tta_txt{width:380px;height:26px;}
+
+
+/*通用设置属性模块*/
+.modal .img_tabs legend a{color:#555;background:#eee;padding:2px 6px;}
+.modal .img_tabs legend a:hover{text-decoration:none;color:#000;}
+.modal .img_tabs legend a.selected{background:#08c; color:#fff;}
+
+/*图片切换模块*/
+.pop_guide .modal-body{max-height:none;}
+.pop_guide .pop_upload .qq-upload-button{margin-top:0px;}
+.pop_guide .qq-upload-drop-area{min-height:35px;}
+.pop_guide .qq-uploader{ height:45px;}
+
+/*发布成功*/
+.publish_pop .point_correct{background:url(../img/point_correct.png) no-repeat;min-height:50px;margin:30px 20px;}
+.publish_pop .point_correct h5{
+	color:#27ACF7;
+	font-size:20px;
+	margin-left:70px;
+	padding-top:10px;
+}
+.publish_pop .point_correct p{
+	color:#444444;
+	margin-top:10px;
+	margin-left:70px;
+}
+.publish_pop .point_correct p a{
+	color:#000;
+	text-decoration:underline;
+}
+.mod_key_settings{width:615px;background:#fff;margin:18px auto 50px;padding: 7px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid RGBA(12,34,55,0.9); top:0; margin:200px 0 0 -300px;}
+.mod_key_settings .modal-header{cursor:move;}
+.mod_key_settings .modal-body li{float:left;line-height:28px;width:50%;}
+.mod_key_settings .modal-body .desc{margin:0 0 0 6px;color:#666;}
+.mod_key_settings .modal-body .btn{width:36px;}
+.mod_key_settings .modal-body .and{width:auto;padding:0 8px 0 4px;text-align:center;}

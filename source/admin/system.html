@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The MultiMedia Release Platform</title>
+<script src="../js/libs/sea.js"></script>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" >
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+<div class="container-fluid">
+	<div class="row-fluid">
+		<form class="form-horizontal">
+			<fieldset>
+				<legend>系统设置</legend>
+				<div class="control-group">
+					<label class="control-label" for="title">活动路径</label>
+					<div class="controls">
+						<div class="input-append">
+                			<input  id="js_url_input" size="16" type="text"><button class="btn" id="js_url_add" type="button">添加为新路径</button><button class="btn" id="js_url_edit" type="button" style="display:none;">修改路径</button>
+              			</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="title"></label>
+					<div class="controls">
+						<table class="table table-bordered table-striped tb_serverpath">
+				            <thead>
+				                <tr>
+				                	<th>序号</th>
+				                    <th>路径</th>
+				                    <th>操作</th>
+				                </tr>
+				            </thead>
+				            <tbody id="js_url_cont">
+				                
+				            </tbody>
+				        </table>
+					</div>
+				</div><div class="control-group">
+					<label class="control-label" for="title">模块分类</label>
+					<div class="controls">
+						<div class="input-append">
+                			<input id="js_cate_input" size="16" type="text"><button class="btn" type="button" id="js_cate_add">添加为新分类</button><button class="btn" type="button" id="js_cate_edit" style="display:none;">修改分类</button>
+              			</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="title"></label>
+					<div class="controls">
+						<table class="table table-bordered table-striped tb_modtype">
+				            <thead>
+				                <tr>
+				                	<th>ID</th>
+				                    <th>分类名</th>
+				                    <th>操作</th>
+				                </tr>
+				            </thead>
+				            <tbody id="js_cate_cont">
+				                
+				            </tbody>
+				        </table>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+<script id="js_cate_tmpl" type="text/template">
+{{#value}}
+<tr>
+	<td>{{cate_id}}</td>
+	<td id="js_cate_{{cate_id}}">{{cate_name}}</td>
+	<td><a class="js_edit" href="javascript:;" data-edit-id="{{cate_id}}">编辑</a> <a class="js_del" data-del-id="{{cate_id}}" href="javascript:;">删除</a></td>
+</tr>
+{{/value}}
+</script>
+<script id="js_url_tmpl" type="text/template">
+{{#value}}
+<tr>
+	<td>{{url_id}}</td>
+	<td id="js_url_{{url_id}}">{{url_link}}</td>
+	<td><a class="js_edit" href="javascript:;" data-edit-id="{{url_id}}">编辑</a> <a class="js_del" data-del-id="{{url_id}}" href="javascript:;">删除</a></td>
+</tr>
+{{/value}}
+</script>
+<script>
+seajs.use('../js/mmrp.main',function(main){
+	main.load('mmrp.admin.system');
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<title>The MultiMedia Release Platform</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/mmrp_v2.css" />
+<style id="js_bg_style" type="text/css">
+.mmrp_help .cont{line-height:1.8}
+.mmrp_help h3{font:500 24px/30px 微软雅黑;border-left:3px solid green;padding:0 0 0 6px;height:30px;overflow:hidden;}
+.mmrp_help h4{font:bold 14px/1.8 微软雅黑;margin:10px 0 0 0;}
+.mmrp_help h4 em{font-weight:normal;color:#f60}
+.mmrp_help h4 strong{color:#999;font-weight:normal;font-style:italic;}
+.mmrp_help h5{line-height:1.8;color:#666;}
+.mmrp_help .h1{margin:0 0 40px 0;}
+.mmrp_help th{text-align:left;font-weight:normal;padding:0 20px 3px 0;}
+.mmrp_help table,.mmrp_help img{margin:10px 0;}
+.mmrp_help table thead *{font-weight:bold;color:#333;border-bottom:1px solid green;}
+.mmrp_help table tbody *{padding:3px;}
+</style>
+<script src="js/libs/sea.js"></script>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+<div class="mmrp_sys_form">
+	<div class="mmrp_help">
+		<div class="mmrp_sys_title"><h2>MMRP使用手册</h2></div>
+		<div class="cont">
+			<div class="h1">
+				<h3>系统设置</h3>
+				<h4>1.活动路径</h4>
+				<ul>
+					<li>【新增】：输入完整的URL地址（以http:// 开头，英文加数字），地址目录和服务器上的对应，（发布接口待联调）</li>
+					<li>【删除】：选中对应地址删除，删除后前台新增活动时就无法显示。（谨慎操作）</li>
+				</ul>
+				<h4>2.模块分类</h4>
+				<ul>
+					<li>【新增】： 新增模块分类，添加模块时需选择模块对应的分类。</li>
+					<li>【删除】： 删除模块分类后，对应的模块不会删除，同时不在编辑页面显示。若要显示，须在数据库中修改字段。</li>
+				</ul>
+			</div>
+			<div class="h1">
+				<h3>录入模板</h3>
+				<h4>1.标题（<em>必填</em>）</h4>
+				<p>模板标题名称，模板名称尽量简短</p>
+				<h4>2.HTML（<em>必填</em>）</h4>
+				<p>参考模板如下：</p>
+				<p><a id="js_link_tmp" href="img/help/page_tmp.html" title="点击查看模板代码" target="_blank"><img src="img/help/p1.png" width="80%" /></a></p>
+				<p>模板中，以下变量必须保留：</p>
+				<table>
+					<thead>
+						<tr>
+							<th width="140">变量</th>
+							<td>说明</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>{{title}}</th>
+							<td>页面标题</td>
+						</tr>
+						<tr>
+							<th>{{page_description}}</th>
+							<td>页面描述</td>
+						</tr>
+						<tr>
+							<th>{style}	<htd>
+							<td>模板默认样式和MMRP生成样式</td>
+						</tr>
+						<tr>
+							<th>{{page_id}}</th>
+							<td>MMRP页面ID</td>
+						</tr>
+						<tr>
+							<th>{{{body}}}</th>
+							<td>MMRP生成内容代码</td>
+						</tr>
+						<tr>
+							<th>{{{javascript}}}</th>
+							<td>MMRP模块脚本</td>
+						</tr>
+					<tbody>
+				</table>
+				<p>除以上变量外，头部、尾部、Mata信息均可按业务需要自定义；</p>
+				<h4>3.CSS（<strong>选填</strong>）</h4>
+				<p>模板页面的默认CSS样式（例如重置样式），通过内联的方式插入到模版中；同时也可以通过在link方式写在模板HTML。</p>
+				<h4>4.缩略图（<em>必填</em>）</h4>
+				<p>模板页面的缩略图，可以通过选择文件或拖拽图片的方式添加。<br/>图片大小为：250*120，图片格式：PNG、JPG</p>
+			</div>
+			<div class="h1">
+				<h3>新增组件</h3>
+				<h4>1.模块名称（<em>必填</em>）</h4>
+				<p>模块名称，尽量简短。</p>
+				<h4>2.模块英文名（<em>必填</em>）</h4>
+				<p>模块英文名，MMRP调用需要。</p>
+				<h4>3.模块分类 （<em>必填</em>）</h4>
+				<p>模块所属分类，分类不存在可在系统设置页新增分类。</p>
+				<h4>4.HTML展示结构（<em>必填</em>）</h4>
+				<p>模块原型HTML代码</p>
+				<h4>5.HTML数据结构（<em>必填</em>）</h4>
+				<p>模块数据结构代码，MMRP采用Mustache JS模板替换引擎，详细了解可访问:<br>
+				<a href="http://mustache.github.com" target="_blank">http://mustache.github.com</a></p> 
+				<h4>6.CSS（<strong>选填</strong>）</h4>
+				<p>模块原型样式，开发人员在制定模块时，尽量避免与其他模块样式冲突。</p>
+				<h4>7.模块缩略图 （<em>必填</em>）</h4>
+				<p>模块缩略图，选择模块时可通过缩略图快速识别，可以通过选择文件或拖拽图片的方式添加。<br>
+				图片大小为：150*80，图片格式：PNG、JPG</p>
+				<h4>8.模块个性化设置（<strong>选填</strong>） </h4>
+				<p>勾选对应的选项，可以对模块样式、数据个性化设置。</p>
+				<table>
+					<thead>
+						<tr>
+							<th width="140">设置项</th>
+							<td>说明</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>基本设置</th>
+							<td>模块宽高、坐标</td>
+						</tr>
+						<tr>
+							<th>文本(整体)设置</th>
+							<td>整体文本的字体、颜色等样式设置</td>
+						</tr>
+						<tr>
+							<th>文本(选中)设置</th>
+							<td>选中的文本字体、颜色等样式设置</td>
+						</tr>
+						<tr>
+							<th>后台数据源</th>
+							<td>动态模块数据源URL</td>
+						</tr>
+						<tr>
+							<th>数据增减</th>
+							<td>模块静态数据演示调整</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<thead>
+						<tr>
+							<th width="140">设置项</th>
+							<td width="100">类名</td>
+							<td>说明</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>列表外间距(margin)</th>
+							<td>m_mar</td>
+							<td>设置该类的margin值</td>
+						</tr>
+						<tr>
+							<th>列表内边距(padding)</th>
+							<td>m_pad</td>
+							<td>设置该类的padding值</td>
+						</tr>
+						<tr>
+							<th>边框大小设置</th>
+							<td>m_bor</td>
+							<td>设置该类的边框值</td>
+						</tr>
+						<tr>
+							<th>图片大小设置</th>
+							<td>m_img</td>
+							<td>设置该类的图片大小</td>
+						</tr>
+						<tr>
+							<th>文本设置</th>
+							<td>m_txt</td> 
+							<td>设置该类的文本字体设置</td>
+						</tr> 
+						<tr>
+							<th>链接设置</th>
+							<td>m_link</td>
+							<td>设置该类的链接字体设置</td>
+						</tr>
+					</tbody>
+				</table>
+				<h5>模块原型HTML</h5>
+				<p><img src="img/help/p2.png" /></p>
+				<h5>MMRP前台设置属性页</h5>
+				<p><img src="img/help/p4.png" /></p>
+			</div>
+			<div class="h1">
+				<h3>查看列表</h3>
+				<h4>1.组件列表</h4>
+				<p>查看模块列表，编辑和删除。（基础类模块不允许删除）</p>
+				<h4>2.模板列表.</h4>
+				<p>查看模板列表，编辑和删除。</p>
+			</div>
+			<div class="h1">
+				<h3>用户权限</h3>
+				<h4>1.管理员</h4>
+				<p>具有添加用户、系统设置、录入模板、新增组件、查看列表、统计查询和删除活动等所有高级功能权限。</p>
+				<h4>2.录入员</h4>
+				<p>具有新增、编辑、删除、发布私有活动、查阅别人活动的权限。</p>
+				<h4>3.游客</h4>
+				<p>具有浏览他人活动权限。</p>
+			</div>
+			<div class="h1">
+				<h3>统计查询</h3>
+				<h4>1.模块使用率</h4>
+				<p>查看各模块在历史活动中使用的频率。</p>
+				<p><img src="img/help/p5.png" /></p>
+				<h4>2.每月发布数</h4>
+				<p>查看当前业务下，每月发布的活动数目。</p>
+				<p><img src="img/help/p6.png" /></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+<script>
+seajs.use('./js/mmrp.main',function(main){
+	main.load('mmrp.query');
+	//view-source:localhost:8080/mmrp_v3/source/img/help/page_tmp.html
+})
+</script>
+</body>
+</html>

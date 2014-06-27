@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>权限设置</title>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../css/external.css?v=03020920">
+<script src="../js/libs/sea.js"></script>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+<div class="container-fluid mmrp_sys_userlist">
+	<div class="row-fluid">
+		<h2 class="mod_title">用户权限</h2>
+        <ul class="nav nav-tabs" id="js_tabs">
+            <li class="active"><a data-tab-id="1" href="#" data-toggle="tab">全部</a></li>
+            <li><a data-tab-id="2" href="#" data-toggle="tab">管理员</a></li>
+            <li><a data-tab-id="3" href="#" data-toggle="tab">录入员</a></li>
+            <li><a data-tab-id="4" href="#" data-toggle="tab">游客</a></li>
+        </ul>
+        <div id="alert" class="alert alert-success">
+            <a class="close" data-dismiss="alert">×</a>
+            <strong>嗯！</strong> 用户权限修改成功!
+        </div>
+		<table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                	<th>头像</th>
+                    <th>性别</th>
+                    <th>用户名</th>
+                    <th>组织架构</th>
+                    <th>用户权限</th>
+                </tr>
+            </thead>
+            <tbody id="tbd_userlist">
+                <!--tr>
+                	<td><img src="http://dayu.oa.com/avatars/williamsli/avatar.jpg" alt=""></td>
+                    <td>WilliamsLi</td>
+                    <td>ECC腾讯电商控股公司\170电商用户体验设计部\数字音乐设计中心\前端开发组</td>
+                    <td>仅查看</td>
+                </tr-->
+            </tbody>
+        </table>
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+</body>
+<script id="js_mod_userlist_tmpl" type="text/template">
+{{#value}}
+<tr>
+    <td><img src="http://dayu.oa.com/avatars/{{login_name}}/avatar.jpg" alt=""></td>
+    <td>{{gender}}</td>
+    <td>{{full_name}}</td>
+    <td>{{department_name}} / {{group_name}}</td>
+    <td>{{#power_20}}
+<div class="btn-group">
+    <button class="btn btn-small" id="power_{{user_id}}">管理员</button>
+    <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li class="m_li"><a href="javascript:;" data-id="{{user_id}}" data-power="1">游客</a></li>
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="10">录入员</a></li>
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="20">管理员</a></li>
+    </ul>
+</div>
+{{/power_20}}
+
+{{#power_10}}
+<div class="btn-group">
+    <button class="btn btn-small" id="power_{{user_id}}">录入员</button>
+    <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="1">游客</a></li>
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="10">录入员</a></li>
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="20">管理员</a></li>
+    </ul>
+</div>
+{{/power_10}}
+
+{{#power_1}}
+<div class="btn-group">
+    <button class="btn btn-small" id="power_{{user_id}}">游客</button>
+    <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="1">游客</a></li>
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="10">录入员</a></li>
+        <li><a href="javascript:;" data-id="{{user_id}}" data-power="20">管理员</a></li>
+    </ul>
+</div>
+{{/power_1}}
+    </td>
+</tr>
+{{/value}}  
+</script>
+<script>
+seajs.use('../js/mmrp.main',function(main){
+    main.load('mmrp.admin.userlist');
+})
+</script>
+</html>

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td { margin: 0; padding: 0; }
+body, button, input, select, textarea, th{ font:12px/1.5 Tahoma,"hiragino sans gb",Helvetica,Arial; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; }
+ul, ol, li { list-style:none; }
+legend { color:#000; }
+fieldset, img { border:none; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+em { font-style:normal; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/*===== 布局 =====*/
+.act_wrapper{position:relative; z-index:1; margin:auto; min-width:1002px; *zoom:1;}
+.act_wrapper .act_inner{position:relative; z-index:2; margin:auto; width:1002px}
+.act_wrapper .act_content{height:100%;}
+.act_wrapper .bg_container{position:absolute;left:0; top:0; width:100%;}

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The MultiMedia Release Platform</title>
+<script src="../js/libs/sea.js"></script>
+<style>
+
+</style>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" >
+<link rel="stylesheet" href="../css/external.css?v=03020920">
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+<div class="container-fluid">
+	<div class="row-fluid">
+		<form id="js_layout_form" class="form-horizontal">
+			<fieldset>
+				<legend>录入模板</legend>
+				<div class="control-group">
+					<label class="control-label" for="title">* 标题</label>
+					<div class="controls">
+						<input type="text" data-db-name="layout_name" autofocus data-validate="required" placeholder="请输入标题...">
+                        <span class="help-inline" style="display:none;">建议输入简短的项目名或者单词，如：音乐、视频等</span>
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<label class="control-label" for="html">* 文件编码</label>
+					<div class="controls">
+						<select data-db-name="layout_charset" data-validate="required">
+							<option value="1">UTF8编码</option>
+							<option value="2">GBK编码</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="html">* HTML</label>
+					<div class="controls">
+						<textarea data-db-name="layout_html" data-validate="required" name="html"></textarea>
+                        <span class="help-inline" style="display:none;">按指定格式录入html模板</span>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="css">CSS</label>
+					<div class="controls">
+						<textarea data-db-name="layout_css" name="css"></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="fileInput">缩略图</label>
+					<div class="controls">
+						<div id="js_file_uploader" class="upload_img"></div>
+                        <input class="input-file" data-db-name="layout_thumbnail" type="hidden">
+                        <img src="" id="js_layout_imgshow" style="display:none;" />
+					</div>
+				</div>
+				<div class="form-actions">
+		            <button type="submit" id="js_layout_add" class="btn btn-primary">录入模板</button>
+                    <button type="submit" id="js_layout_edit" style="display:none" class="btn btn-primary">修改模板</button>
+		        </div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+<script>
+seajs.use('../js/mmrp.main',function(main){
+	main.load('mmrp.admin.layout.add');
+})
+</script>
+</body>
+</html>

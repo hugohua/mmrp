@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>查看列表</title>
+<link rel="stylesheet" href="../css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="../js/libs/sea.js"></script>
+
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+<div class="container-fluid">
+	<div class="row-fluid">
+		<h2 class="mod_title">查看列表</h2>
+		<ul id="js_tabs" class="nav nav-tabs">
+      <li class="active"><a data-tab-id="1" href="#js_mods" data-toggle="tab">组件列表</a></li>
+      <li><a data-tab-id="2" href="#js_layouts" data-toggle="tab">模板列表</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="js_mods">
+          <ul class="mod_list"></ul>
+      </div>
+      <div class="tab-pane" id="js_layouts">
+        <ul class="mod_layoutlist"></ul>
+      </div>
+    </div><!--.tab-content -->
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+
+<script id="js_layouts_tmpl" type="text/template">
+{{#value}}
+  <li><a href="layout_add.html?layout_id={{layout_id}}"><img src="{{layout_url}}" alt="{{layout_name}}"></a>
+  <p class="name"><a href="layout_add.html?layout_id={{layout_id}}">{{layout_name}}</a></p>
+  <p class="action"><a href="layout_add.html?layout_id={{layout_id}}">编辑</a>|<a href="javascript:;" class="js_del_layout" data-del-id="{{layout_id}}">删除</a></p>
+  </li>
+ {{/value}}  
+</script>
+
+<script id="js_mods_tmpl" type="text/template">
+{{#value}}
+  <li>
+  {{#mod_base_type}}
+  <img src="{{mod_url}}" alt="">
+  {{/mod_base_type}}
+  {{^mod_base_type}}
+  <a href="mod.html?mod_id={{mod_id}}"><img src="{{mod_url}}" alt=""></a>
+  {{/mod_base_type}}
+
+  <p class="name"><a href="mod.html?mod_id={{mod_id}}">{{mod_name}}</a> <em>({{cate_name}})</em></p>
+  {{^mod_base_type}}
+  <p class="action"><a href="mod.html?mod_id={{mod_id}}">编辑</a>|<a href="javascript:;" class="js_del_mod" data-del-id="{{mod_id}}">删除</a></p>
+  {{/mod_base_type}}
+  </li>
+{{/value}}  
+</script>
+
+<script>
+seajs.use('../js/mmrp.main',function(main){
+	main.load('mmrp.admin.list');
+})
+</script>
+</body>
+</html>

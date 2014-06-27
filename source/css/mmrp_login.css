@@ -1,0 +1,20 @@
+/*===== 登录页 =======*/
+.mmrp_login{background:#f2f2f2;}
+.sys_ui{position:relative; margin:50px; box-shadow:0 0 8px rgba(0,0,0,0.2); background-color:#FFF;}
+.sys_ui_hd{padding:0 10px; height:40px; background:-webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#1F1F1F));box-shadow:0 0 6px rgba(0,0,0,.5);}
+.sys_ui_hd h1 a{float:left; margin-top:5px; padding:0 5px; height:30px; color:#FFF; text-decoration:none; line-height:30px;}
+.sys_ui_hd h1 span{float:left; font-size:24px; text-shadow:0 0 2px rgba(0,0,0,0.6);}
+.sys_ui_hd h1 span:nth-child(1){-webkit-transform:rotate(-5deg);}
+.sys_ui_hd h1 span:nth-child(2){margin:2px 0 0 5px; -webkit-transform:rotate(-10deg); font-size:28px;}
+.sys_ui_hd h1 span:nth-child(3){margin-left:-1px; -webkit-transform:rotate(-15deg);}
+.sys_ui_hd h1 span:nth-child(4){-webkit-transform:rotate(-5deg);}
+
+.sys_ui_ft{padding:15px 20px; border-top:1px solid #e2e2e2; background-color:#eeeeee;}
+.sys_ui_ft .btn_1{float:right;}
+.sys_ui_ft .btn_2{float:left;}
+		
+.act_login{position:fixed; left:50%; top:45%; margin-top:-190px; margin-left:-240px; width:480px;}
+.act_login .int_form{padding:20px 40px;}
+.act_login .int_form li{margin:10px 0;}
+.act_login .int_form span{display:none;}
+.act_login .int_form input{margin:auto; display:block; padding:6px; width:250px; font-size:14px;}

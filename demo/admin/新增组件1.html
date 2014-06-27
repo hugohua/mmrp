@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新增组件第1步</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/codemirror.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/codemirror.js"></script>
+<script type="text/javascript" src="js/css.js"></script>
+<script type="text/javascript" src="js/xml.js"></script>
+<script type="text/javascript" src="js/javascript.js"></script>
+
+<style type="text/css">
+.CodeMirror{border:1px solid #CCC;border-radius:3px;line-height:18px;}
+</style>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header">
+	<section> 
+		<h1>MMRP</h1>
+		<ul class="mod_nav">
+			<li><a href="../创建活动.html">新建流程</a></li>
+			<li><a href="../流水记录.html">流水查询</a></li>
+			<li><a href="../统计.html">统计查询</a></li>
+		</ul>
+		<div class="mod_user"><a href="##">登录</a> [ pufentan | <a href="##">注销</a> ]</div>
+	</section>
+	<ul class="mod_nav_sub">
+		<li><a href="录入模板.html">录入模板</a></li>
+        <li><a class="current" href="新增组件1.html">新增组件</a></li>
+        <li><a href="查看列表.html">查看列表</a></li>
+        <li><a href="权限设置.html">用户权限</a></li>
+	</ul>	
+</header>
+<!--导航组件 E-->
+<div class="container-fluid">
+	<div class="row-fluid">
+			
+		<form class="form-horizontal">
+			<fieldset>
+				<legend>新增组件</legend>
+				<ol class="unstyled mod_step step_done_1">
+					<li class="step1">第一步</li>
+					<li class="step2">第二步</li>
+				</ol>
+				<div class="control-group">
+					<label class="control-label" for="title">标题</label>
+					<div class="controls">
+						<input type="text" class="span3" placeholder="请输入标题...">
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="html">HTML</label>
+					<div class="controls">
+						<textarea id="html" name="html"><!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+</body>
+</html></textarea>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="css">CSS</label>
+					<div class="controls">
+						<textarea id="css" name="css">@charset "utf-8";</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="js">javascript</label>
+					<div class="controls">
+						<textarea id="js" name="js">function(){};</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="fileInput">上传图片</label>
+					<div class="controls">
+						<input class="input-file" id="fileInput" type="file">
+					</div>
+				</div>
+				<div class="form-actions">
+                    <button type="submit" class="btn btn-primary" onclick="location.href='新增组件2.html';return false">下一步</button>
+                    <button class="btn">取消</button>
+                </div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+<footer class="mmrp_sys_footer">
+	<div>
+		<p class="copyright"><span>&copy;</span> 2011-2012 <a href="about.htm">MMRP Dev.team</a></p>
+		<p class="support">Power by HTML5 &amp; CSS3. Support for <a href="http://www.google.com/chrome/" target="_blank">Chrome.</a></p>
+	</div>
+</footer>
+
+<script>
+var editorHTML = CodeMirror.fromTextArea(document.getElementById("html"), {
+  mode: "text/html",
+  lineNumbers: true,
+  lineWrapping: true,
+});
+var editorCSS = CodeMirror.fromTextArea(document.getElementById("css"), {
+  mode: "text/javascript",
+  lineNumbers: true,
+  lineWrapping: true,
+});
+var editorJS = CodeMirror.fromTextArea(document.getElementById("js"), {
+  mode: "text/javascript",
+  lineNumbers: true,
+  lineWrapping: true,
+});
+</script>
+</body>
+</html>

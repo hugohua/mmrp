@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The MultiMedia Release Platform</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="../js/libs/sea.js"></script>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+
+<div class="mmrp_sys_form">
+	<div class="mmrp_sys_projstats">
+		<div class="mmrp_sys_title"><h2>统计</h2></div>
+	 	<!--<div class="cont">
+	 		<dl>
+	 			<dt>创建人：</dt>
+	 			<dd><input class="mmrp_sys_txt" placeholder="RTX帐号" /><dd>
+	 			<dt>创建日期：</dt>
+	 			<dd><input class="mmrp_sys_txt" placeholder="0000/00/00" size="8" /> 至 <input class="mmrp_sys_txt" placeholder="0000/00/00" size="8" /><button class="mmrp_sys_btn">查询</button></dd>
+	 		</dl>
+	 	</div>-->
+        
+        <div class="">
+        	<div id="js_chart_users"></div>
+            <div id="js_chart_frequency"></div>
+        </div>
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+</body>
+<script>
+seajs.use('../js/mmrp.main',function(main){
+	main.load('mmrp.admin.statistics');
+})
+</script>
+</html>

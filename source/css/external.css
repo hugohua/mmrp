@@ -1,0 +1,230 @@
+/*图片上传插件*/
+.qq-uploader{position:relative; height:80px; }
+
+.qq-upload-button{
+    color:#4F4F4F;
+    font-size:12px;
+    line-height:25px;
+    display:inline-block;
+	float:left;
+	width:98px;
+    height:25px;
+    padding:0 12px;
+    border-radius:2px;
+    background:-webkit-gradient(linear,left top,left bottom,from(#EDEDED),to(#B2B9BB));
+    background:-moz-linear-gradient(center top,#EDEDED,#B2B9BB) repeat scroll 0 0 transparent;
+    -webkit-box-shadow:0 1px 1px #C4C4C4;
+    -moz-box-shadow:0 1px 1px #C4C4C4;
+    text-shadow:0 1px 0 #F2F3F3;
+    border:1px solid #B7B7B7;
+    overflow:hidden;
+}
+.qq-upload-button-hover,
+.qq-upload-button-focus{
+    background:-webkit-gradient(linear,left top,left bottom,from(#B2B9BB),to(#EDEDED));
+    background:-moz-linear-gradient(center top,#B2B9BB,#EDEDED) repeat scroll 0 0 transparent;
+    text-decoration:none;
+}
+.qq-upload-drop-area{
+	color:#777777;
+	width:99%;
+	height:100%;
+	min-height:60px;
+	text-align:center;
+	background-color:#F4F4F4;
+	border:2px dashed #DCDFE4;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	cursor:move;
+	position:absolute;
+	z-index:2;
+	top:0;
+	left:0;
+}
+.qq-upload-drop-area span{
+	display:block;
+	position:absolute;
+	top:50%;
+	margin-top:-8px;
+	width:100%;
+	font-size:16px;
+}
+.qq-upload-drop-area-active{color:#FF7171;background-color:RGBA(255,151,151,1);border:2px dashed #FF7171;}
+
+.qq-upload-list {margin:15px 35px;padding:0;list-style:disc;display:none;}
+.qq-upload-list li {margin:0;padding:0;line-height:15px;font-size:12px;}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+.qq-upload-file {}
+.qq-upload-spinner {display:inline-block; background: url("loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}
+.qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+.qq-upload-failed-text {display:none;}
+.qq-upload-fail .qq-upload-failed-text {display:inline;}
+
+/*颜色选择器插件*/
+.colorpicker {
+	width: 356px;
+	height: 176px;
+	overflow: hidden;
+	position: absolute;
+	background: url(../img/colorpicker/colorpicker_background.png);
+	font-family: Arial, Helvetica, sans-serif;
+	display:none;
+	z-index:19;
+}
+.colorpicker_color {
+	width: 150px;
+	height: 150px;
+	left: 14px;
+	top: 13px;
+	position: absolute;
+	background: #f00;
+	overflow: hidden;
+	cursor: crosshair;
+}
+.colorpicker_color div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 150px;
+	background: url(../img/colorpicker/colorpicker_overlay.png);
+}
+.colorpicker_color div div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 11px;
+	height: 11px;
+	overflow: hidden;
+	background: url(../img/colorpicker/colorpicker_select.gif);
+	margin: -5px 0 0 -5px;
+}
+.colorpicker_hue {
+	position: absolute;
+	top: 13px;
+	left: 171px;
+	width: 35px;
+	height: 150px;
+	cursor: n-resize;
+}
+.colorpicker_hue div {
+	position: absolute;
+	width: 35px;
+	height: 9px;
+	overflow: hidden;
+	background: url(../img/colorpicker/colorpicker_indic.gif) left top;
+	margin: -4px 0 0 0;
+	left: 0px;
+}
+.colorpicker_new_color {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	left: 213px;
+	top: 13px;
+	background: #f00;
+}
+.colorpicker_current_color {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	left: 283px;
+	top: 13px;
+	background: #f00;
+}
+.colorpicker input {
+	background-color: transparent;
+	border: 1px solid transparent;
+	position: absolute;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #898989;
+	top: 4px;
+	right: 11px;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	height: 11px;
+}
+.colorpicker_hex {
+	position: absolute;
+	width: 72px;
+	height: 22px;
+	background: url(../img/colorpicker/colorpicker_hex.png) top;
+	left: 212px;
+	top: 142px;
+}
+.colorpicker_hex input {
+	right: 6px;
+}
+.colorpicker_field {
+	height: 22px;
+	width: 62px;
+	background-position: top;
+	position: absolute;
+}
+.colorpicker_field span {
+	position: absolute;
+	width: 12px;
+	height: 22px;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	cursor: n-resize;
+}
+.colorpicker_rgb_r {
+	background-image: url(../img/colorpicker/colorpicker_rgb_r.png);
+	top: 52px;
+	left: 212px;
+}
+.colorpicker_rgb_g {
+	background-image: url(../img/colorpicker/colorpicker_rgb_g.png);
+	top: 82px;
+	left: 212px;
+}
+.colorpicker_rgb_b {
+	background-image: url(../img/colorpicker/colorpicker_rgb_b.png);
+	top: 112px;
+	left: 212px;
+}
+.colorpicker_hsb_h {
+	background-image: url(../img/colorpicker/colorpicker_hsb_h.png);
+	top: 52px;
+	left: 282px;
+}
+.colorpicker_hsb_s {
+	background-image: url(../img/colorpicker/colorpicker_hsb_s.png);
+	top: 82px;
+	left: 282px;
+}
+.colorpicker_hsb_b {
+	background-image: url(../img/colorpicker/colorpicker_hsb_b.png);
+	top: 112px;
+	left: 282px;
+}
+.colorpicker_submit {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background: url(../img/colorpicker/colorpicker_submit.png) top;
+	left: 322px;
+	top: 142px;
+	overflow: hidden;
+}
+.colorpicker_focus {
+	background-position: center;
+}
+.colorpicker_hex.colorpicker_focus {
+	background-position: bottom;
+}
+.colorpicker_submit.colorpicker_focus {
+	background-position: bottom;
+}
+.colorpicker_slider {
+	background-position: bottom;
+}

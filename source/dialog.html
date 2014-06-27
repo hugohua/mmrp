@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The MultiMedia Release Platform</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/mmrp_v2.css" />
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header">
+	<section> 
+        <h1>MMRP<sup>BETA</sup></h1>
+        <ul class="mod_nav">
+            <li><a href="select_tp.htm">新建流程</a></li>
+            <li><a href="query.htm">流水查询</a></li>
+            <li id="js_power_statistics" style="display:none"><a href="statistics.html">统计查询</a></li>
+        </ul>
+        <div class="mod_user">[ <span id="js_login_user_name"></span> | <a href="oa_login.php" id="js_logout" title="注销退出系统">注销</a> ]</div>
+    </section> 	
+</header>
+<!--导航组件 E-->
+
+<div class="">
+	<section class="mod_gb_settings mod_key_settings" style="width:615px;background:#fff;margin:18px auto 50px;padding: 7px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid RGBA(12,34,55,0.9);">
+	    <div class="modal pop_guide">
+		    <div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>键盘快捷键帮助</h3></div>
+		    <div class="modal-body">
+		    	<fieldset class="js_mod_setting">
+		            <legend class="c_tx1">常规</legend>
+		            <ul>
+		            	<li><label class="btn">?</label><span class="desc">打开键盘操作帮助</span></li>
+		            	<li><label class="btn">Esc</label><span class="desc">关闭浮层弹出框</span></li>
+		            	<li><label class="btn">Delete</label><span class="desc">删除选中模块</span></li>
+		            </ul>
+		        </fieldset>
+		       	<fieldset class="js_mod_setting">
+		            <legend class="c_tx1">移动模块</legend>
+		            <ul>
+		            	<li><label class="btn">↑</label><span class="desc">模块向上移动1px</span></li>
+		            	<li><label class="btn">↓</label><span class="desc">模块向下移动1px</span></li>
+		            	<li><label class="btn">←</label><span class="desc">模块向左移动1px</span></li>
+		            	<li><label class="btn">→</label><span class="desc">模块向右移动1px</span></li>
+
+		            </ul>
+		        </fieldset>
+		        <fieldset class="js_mod_setting">
+		            <legend class="c_tx1">调整模块</legend>
+		            <ul>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">↑</label><span class="desc">模块高度减少1px</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">↓</label><span class="desc">模块高度增加1px</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">←</label><span class="desc">模块宽度减少1px</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">→</label><span class="desc">模块宽度增加1px</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">L</label><span class="desc">将选中模块左对齐</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">T</label><span class="desc">将选中模块顶对齐</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">A</label><span class="desc">选中全部模块</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">V</label><span class="desc">复制并黏贴模块</span></li>
+		            </ul>
+		        </fieldset>
+		        <fieldset class="js_mod_setting">
+		            <legend class="c_tx1">系统功能</legend>
+		            <ul>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">S</label><span class="desc">保存页面草稿</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">B</label><span class="desc">上传背景</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">E</label><span class="desc">配置修改</span></li>
+		            	<li><label class="btn">Shift</label><strong class="and">+</strong><label class="btn">Q</label><span class="desc">预览效果</span></li>
+		            </ul>
+		        </fieldset>
+		    </div>
+		    <div class="modal-footer"><button id="js_close_panel" class="btn btn-primary">确认</button></div>
+		</div>
+	</section>
+</div>
+<footer class="mmrp_sys_footer">
+	<div>
+		<p class="copyright"><span>&copy;</span> 2011-2012 <a href="about.htm">MMRP Dev.team</a> |  <a href="http://icase.oa.com/response/contact?Dept=isux&Name=mmrp&Admin[0]=hugohua&Admin[1]=williamsli&Admin[2]=pufentan" target="_blank">意见反馈</a></p>
+		<p class="support">Power by HTML5 &amp; CSS3. Support for <a href="http://www.google.com/chrome/" target="_blank">Chrome.</a></p>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<title>The MultiMedia Release Platform</title>
+<link rel="stylesheet" href="css/mmrp_v2.css" />
+<script src="js/libs/sea.js"></script>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+
+<!-- 内容区域 S -->
+<div class="mmrp_sys_form">
+	<div class="mmrp_sys_projlist mmrp_sys_proj_add">
+		<div class="mmrp_sys_title"><h2>请新建或选择系统布局模板</h2></div>
+		<div id="js_item_list" class="cont">
+			<ul>
+				<!--<li><a title="新建带有YQQ头尾的页面" class="cover_page create js_new_template_btn" href="new.htm" data-layout="1"><img src="img/add_template_item.png" alt="新建模板" /><span class="tag">常规</span></a></li>
+                
+                <li><a title="新建没有头部和尾部的空白页面" class="cover_page create js_new_template_btn" href="new.htm" data-layout="2"><img src="img/add_template_item.png" alt="新建模板" /><span class="tag">IFRAME</span></a></li>-->
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 内容区域 E -->
+
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+
+<script id="js_layout_tmpl" type="text/template">
+{{#value}}
+<li><a class="cover_page create js_new_template_btn" href="new.htm" data-layout="{{layout_id}}"><img src="img/add_template_item.png" alt="新建模板" /><span class="tag">{{layout_name}}</span></a></li>
+ {{/value}}
+ </script>
+
+<script id="js_one_template" type="text/template">
+{{#value}}
+<li>
+	<a data-theme="{{page_theme}}" data-template="{{page_template}}" data-layout="{{page_layout}}" href="{{page_url}}" title="点击图片从模板中新建活动" class="cover_page js_clone_btn">
+		<img alt="{{page_name}}" src="{{page_thumbnail}}">
+		<strong>{{page_name}}</strong>
+	</a>
+	<span class="opt">
+		<a class="mmrp_icon_view" href="{{page_url}}" title="点击查看外网页面" target="_blank"></a>
+		{{#power_20}}
+		<a class="mmrp_icon_del js_del_btn" href="javascript:;" data-del-id="{{page_id}}" ></a>
+		{{/power_20}}
+	</span>
+ </li>
+ {{/value}}
+ </script>
+
+<script>
+seajs.use('./js/mmrp.main',function(main){
+	main.load('mmrp.create');
+})
+</script>
+</body>
+</html>

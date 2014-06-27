@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<title>The MultiMedia Release Platform</title>
+<link rel="stylesheet" href="css/mmrp_v2.css" />
+<link rel="stylesheet" href="css/mmrp_login.css" />
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script src="js/configs.js"></script>
+<script src="js/func.js"></script>
+<script src="js/rest.js"></script>
+<script src="js/users.js"></script>
+<body class="mmrp_login">
+
+<!--导航组件 S-->
+<header class="mmrp_sys_header">
+	<section> 
+        <h1>MMRP<sup>BETA</sup></h1>
+        <ul class="mod_nav">
+            <li>&nbsp;</li>
+        </ul>
+    </section> 	
+</header>
+<!--导航组件 E-->
+
+	<div class="act_login">
+		<div class="sys_ui">
+			<div class="sys_ui_hd">
+            	<h1><a href="#"><span>M</span><span>M</span><span>R</span><span>p</span></a></h1>
+			</div>
+
+			<div class="sys_ui_bd">
+				<form id="js_act_login_form" action="act_info_entry.html" method="post">
+					<ul class="int_form">
+						<li><label><span>帐号：</span><input type="text" id="js_user_name_en" class="int_txt" placeholder="请输入用户名" /></label></li>
+						<li><label><span>密码：</span><input type="password" id="js_user_password" class="int_txt" placeholder="请输入登录密码" /></label></li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="sys_ui_ft">
+				<div class="operation_area clearfix">
+					<a id="js_login" href="javascript:;" class="btn_1">登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

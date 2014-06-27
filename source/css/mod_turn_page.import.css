@@ -1,0 +1,11 @@
+/*=======================================================
+	文件名：mod_turn_page
+	作者：g_ISUX_DM_FD Hugohua
+	说明：MMRP_V2 分页 样式。
+=======================================================*/
+.mod_turn_page{padding:20px 0; text-align:right; font-family:"tahoma"; font-size:18px;}
+.mod_turn_page a,
+.mod_turn_page span{display:inline-block; text-align:center; margin:0 5px; padding:10px 8px; color:#666;}
+.mod_turn_page a{border:1px solid #FFF;}
+.mod_turn_page a:hover{border:1px solid #CCC; text-decoration:none;}
+.mod_turn_page .current{color:#FFF; border:1px solid #FF5400; background-color:#FF5400;}

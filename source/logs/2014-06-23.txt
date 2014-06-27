@@ -1,0 +1,9 @@
+2014-06-27 7:52:17 - INFO  --> hugohua UPDATE data for table tb_page , page_id = 1 
+2014-06-27 7:57:38 - INFO  --> hugohua UPDATE data for table tb_theme , theme_id=1 
+2014-06-27 7:57:39 - INFO  --> hugohua UPDATE thumbnail for table tb_page , id = 1 
+2014-06-27 7:58:18 - INFO  --> hugohua UPDATE data for table tb_theme , theme_id=1 
+2014-06-27 7:58:19 - INFO  --> hugohua UPDATE thumbnail for table tb_page , id = 1 
+2014-06-27 8:29:28 - INFO  --> hugohua UPDATE data for table tb_page , page_id = 2 
+2014-06-27 8:29:34 - INFO  --> hugohua UPDATE data for table tb_page , page_id = 2 
+2014-06-27 8:29:55 - INFO  --> hugohua UPDATE data for table tb_theme , theme_id=2 
+2014-06-27 8:29:56 - INFO  --> hugohua UPDATE thumbnail for table tb_page , id = 2 

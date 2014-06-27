@@ -1,0 +1,13 @@
+1、install.php 文件需要有可执行权限  
+   chmod 755 install.php
+2、js/mmrp.config.user.js 文件需要写权限  
+   chmod 766 js/mmrp.config.user.js
+3、inc/conn.php 文件需要写权限
+   chmod 766 inc/conn.php
+4、mmrp.lock这个文件写入会失败，需要对上级目录赋执行+写权限(建议安装完改回去)。
+   chmod 777 mmrp
+5、检查php.ini中date.timezone，如：date.timezone = "Asia/Shanghai"
+6、检查php.ini中session.save_path，如：session.save_path = "/data/php/session"
+7、需要使用soap.so模块，确认ws.oa.com是否在HOSTS中
+8、logs目录权限变更
+   chmod -R 777 logs

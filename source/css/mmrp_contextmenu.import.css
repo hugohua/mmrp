@@ -1,0 +1,17 @@
+/*=======================================================
+	文件名：
+	作者：g_ISUX_DM_FD Hugohua
+	说明：右键操作
+=======================================================*/
+.mouse_right_click{position:absolute; z-index:999; border:1px solid #979797; box-shadow:1px 1px 5px rgba(0,0,0,0.4); background-color:#F0F0F0; font-family:"Microsoft Yahei";}
+.mouse_right_click ul{padding:2px; border-top:1px solid #FFF; border-left:1px solid #FFF;}
+.mouse_right_click li a{display:block; color:#333;}
+.mouse_right_click li a:hover{position:relative; margin:-1px; border-radius:2px; border:1px solid #AECFF7; background-color:#E9EFF6; text-decoration:none;}
+.mouse_right_click li i,
+.mouse_right_click li span{overflow:hidden; float:left; height:28px; line-height:28px;}
+.mouse_right_click li i{margin:0; width:24px; border-right:1px solid #E2E3E3; background-position:-230% 50%; -webkit-transition:all 200ms ease-in-out;}
+.mouse_right_click li a:hover i{background-position:50% 50%;}
+.mouse_right_click li span{padding:0 10px; min-width:180px; border-left:1px solid #FFF;}
+.mouse_right_click li.separator{border-top:1px solid #CCC;}
+.mouse_right_click li.disabled a{cursor:default; color:#999;}
+.mouse_right_click li.disabled a:hover{margin:0; border:0 none; background-color:transparent;}

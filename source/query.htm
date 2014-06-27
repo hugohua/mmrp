@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<title>The MultiMedia Release Platform</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/mmrp_v2.css" />
+<style id="js_bg_style" type="text/css">
+ul{margin:0;}
+</style>
+<script src="js/libs/sea.js"></script>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header"></header>
+<!--导航组件 E-->
+
+<div class="mmrp_sys_form">
+	<div class="mmrp_sys_projlist">
+		<div class="mmrp_sys_title"><h2>我的草稿</h2></div>
+		<div class="cont">
+			<ul id="js_my_draft">
+				
+			</ul>
+            <script id="js_list_tmpl" type="text/template">
+				{{#value}}
+				<li>
+					{{#power_20}}
+                	<a class="cover_page" href="new.htm?layout_id={{page_layout}}&amp;theme_id={{page_theme}}&amp;template_id={{page_template}}&amp;id={{page_id}}">
+                    	<img src="{{page_thumbnail}}" /><strong>{{page_name}}</strong><em>{{page_creator}}</em>
+                    </a>
+					{{/power_20}}
+					{{^power_20}}
+					<span class="cover_page">
+                    <img src="{{page_thumbnail}}" /><strong>{{page_name}}</strong><em>{{page_creator}}</em>
+					</span>
+					{{/power_20}}
+                    <span class="opt">
+						{{#history}}
+                    	<a href="javascript:;" class="mmrp_icon_view"></a>
+                        <a href="javascript:;" class="mmrp_icon_404"></a>
+						{{/history}}
+						<a href="javascript:;" class="mmrp_icon_edit"></a>
+                        <a href="javascript:;" data-del-id="{{page_id}}" class="js_del_btn mmrp_icon_del"></a>
+                    </span>
+                 </li>
+				{{/value}}
+			</script>
+            
+            <script id="js_my_tmpl" type="text/template">
+				{{#value}}
+				<li>
+                	<a class="cover_page" href="new.htm?layout_id={{page_layout}}&amp;theme_id={{page_theme}}&amp;template_id={{page_template}}&amp;id={{page_id}}">
+                    	<img src="{{page_thumbnail}}" /><strong>{{page_name}}</strong><em>{{page_creator}}</em>
+                    </a>
+                    <span class="opt">
+						{{#history}}
+                    	<a href="javascript:;" class="mmrp_icon_view"></a>
+                        <a href="javascript:;" class="mmrp_icon_404"></a>
+						{{/history}}
+						<a href="javascript:;" class="mmrp_icon_edit"></a>
+                        <a href="javascript:;" data-del-id="{{page_id}}" class="js_del_btn mmrp_icon_del"></a>
+                    </span>
+                 </li>
+				{{/value}}
+			</script>
+		</div>
+	</div>
+	<div class="mmrp_sys_projlist">
+		<div class="mmrp_sys_title"><h2>历史查询</h2></div>
+		<div class="mmrp_sys_tab">
+			<ul>
+				<li><a href="#my_publish" atype="me" class="on js_history_tab">我的活动</a></li>
+                <li><a href="#my_authorize" atype="authorize" class="js_history_tab">授权的活动</a></li>
+                <li><a href="#not_me_publish" atype="notme" class="js_history_tab">他们的活动</a></li>
+                <li><a href="#week_publish" atype="week" class="js_history_tab">本周全部活动</a></li>
+                <li><a href="#month_publish" atype="month" class="js_history_tab">本月全部活动</a></li>
+			</ul>
+		</div>
+        
+        <div class="cont">
+			<ul id="js_tp_item_list" class="clearfix">
+            </ul>
+		</div>
+        
+       
+        
+        <div id="js_pagination" class="mod_turn_page"></div>
+        
+	</div>
+</div>
+<!--尾部组件 S-->
+<footer class="mmrp_sys_footer"></footer>
+<!--尾部组件 E-->
+<script id="js_nodata" type="text/template">
+    <div class="alert alert-info">
+        <strong>抱歉！</strong>找不到相关数据
+    </div>
+</script>
+<script>
+seajs.use('./js/mmrp.main',function(main){
+	main.load('mmrp.query');
+})
+</script>
+</body>
+</html>

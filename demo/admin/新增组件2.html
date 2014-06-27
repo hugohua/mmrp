@@ -1,0 +1,934 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新增组件第2步</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/codemirror.css" />
+<link rel="stylesheet" href="http://mmrp.oa.com/css/mmrp_v2.css">
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header">
+	<section> 
+		<h1>MMRP</h1>
+        <ul class="mod_nav">
+            <li><a href="../创建活动.html">新建流程</a></li>
+            <li><a href="../流水记录.html">流水查询</a></li>
+            <li><a href="../统计.html">统计查询</a></li>
+        </ul>
+		<div class="mod_user"><a href="##">登录</a> [ pufentan | <a href="##">注销</a> ]</div>
+	</section>
+	<ul class="mod_nav_sub">
+        <li><a href="录入模板.html">录入模板</a></li>
+        <li><a class="current" href="新增组件1.html">新增组件</a></li>
+        <li><a href="查看列表.html">查看列表</a></li>
+        <li><a href="权限设置.html">用户权限</a></li>
+    </ul>   
+</header>
+<!--导航组件 E-->
+<div class="container-fluid">
+	<div class="row-fluid">    
+			<form class="form-horizontal">
+				<fieldset>
+					<legend>新增组件</legend>
+                    <ol class="unstyled mod_step step_done_2">
+                        <li class="step1">第一步</li>
+                        <li class="step2">第二步</li>
+                    </ol>
+                    <div class="row">
+                    <div class="span4">
+    					<div class="control-group">
+                            <label class="control-label" for="inlineCheckboxes">行级复选框</label>
+                            <div class="controls">
+                              <label class="checkbox inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                              </label>
+                              <label class="checkbox inline">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                              </label>
+                              <label class="checkbox inline">
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                              </label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="optionsCheckboxList">多复选框</label>
+                            <div class="controls">
+                              <label class="checkbox">
+                                <input type="checkbox" name="optionsCheckboxList1" value="option1">
+                        第一个选项，最好给出将其做为首选的理由
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="optionsCheckboxList2" value="option2">
+                        第二个选项，同样可选并包含在表单结果中
+                              </label>
+                              <label class="checkbox">
+                                <input type="checkbox" name="optionsCheckboxList3" value="option3">
+                        第三个选项，同样可选并包含在表单结果中
+                              </label>
+                              <p class="help-block"><strong>注意</strong>
+                        建议使用label标签将option选项包裹起来，这样可以提供更大的点击区域，提升表单可用性。
+                          </p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="select01">选择框</label>
+                            <div class="controls">
+                              <select id="select01">
+                                <option>请选择</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="multiSelect">复选框</label>
+                            <div class="controls">
+                              <select multiple="multiple" id="multiSelect">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="textarea">文本域</label>
+                            <div class="controls">
+                              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">单选钮</label>
+                            <div class="controls">
+                              <label class="radio">
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        第一个选项，最好给出将其做为首选的理由
+                              </label>
+                              <label class="radio">
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        第二个选项，如果选译该选项就会取消第一个选项。
+                              </label>
+                            </div>
+                        </div>
+                        
+
+    					<div class="form-actions">
+    			            <button type="submit" class="btn btn-primary">保存组件</button>
+    			            <button class="btn">取消</button>
+    			        </div>
+                    </div>
+                    <div class="span8">
+            <h2>效果展示：</h2>
+            <section class="mod_gb_settings" style="width:615px;background:#fff;margin:18px auto 50px;padding: 7px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid RGBA(12,34,55,0.9);">
+        
+    <div class="dialog_box">
+        <div class="dialog_main">
+            <h3>[<span id="js_type_s">段落</span>]  [ID：<span id="js_class_name_s">mod_style_4</span>] 属性设置</h3>
+            <div class="mod_gb_settings">
+                <div id="js_mod_setting">
+                    <!-- .js_mod_setting 是属性设置类，加上这个类名则输入内容时，会实时更新 -->
+                    <fieldset id="js_set_base" class="js_mod_setting">
+                        <legend class="c_tx1">基本设置</legend>
+                        <ul>
+                            <li class="clearfix" style="display:none;">
+                                <label>
+                                    <strong>ID</strong>
+                                    <input type="text" placeholder="命名唯一性" class="int_txt" id="js_class_name">
+                               </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong>宽度</strong>
+                                    <input type="number" id="js_width" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                                <label>
+                                    <strong>高度</strong>
+                                    <input type="number" id="js_height" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                                <label>
+                                    <strong>X坐标</strong>
+                                    <input type="number" id="js_left_pos" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                                <label>
+                                    <strong>Y坐标</strong>
+                                    <input type="number" id="js_top_pos" min="10" max="1002" step="1" value="200" class="int_number">
+                                </label>
+                            </li>
+                        </ul>
+                        <input type="hidden" id="js_type" value="base_p">
+                    </fieldset>
+                    <fieldset id="js_zhengti" class="js_mod_setting" style="">
+                        <legend class="c_tx1">文本(整体)设置</legend>
+
+                            <label class="bg_input_1 bg_input_current" style="display:none;">
+                                <p class="ico_alignright"><input type="radio" name="js_txtAlign" value="inherit" checked="checked"><span class="style_show_1">无</span></p>
+                            </label>
+                            &nbsp;&nbsp;
+                            <label>
+                                <select id="js_font_family">
+                                    <option value="">默认字体</option>
+                                    <option value="'Microsoft YaHei','SimHei'">微软雅黑</option>
+                                    <option value="SimSun">宋体</option>
+                                </select>
+                            </label>
+                            <label title="所有文字的大小，默认是12px">
+                                <input type="number" id="js_fontSize" min="12" max="48" step="1" value="12" class="int_number_2"><span class="c_tx1">px</span>
+                            </label>
+                            &nbsp;&nbsp;
+                            <label title="所有文字的行高，默认是18px">
+                                <strong>行高</strong>
+                                <input type="number" id="js_lineHeight" min="12" max="100" step="1" value="18" class="int_number_2"><span class="c_tx1">px</span>
+                            </label>
+                            &nbsp;&nbsp;
+                            <label class="bg_input_1" title="颜色">
+                                <input type="color" id="js_colorNum" class="color">
+                            </label>
+                            <label class="bg_input_1 bg_input_current">
+                                <p class="ico_fontbold"><input type="checkbox" id="js_fontWeight"><span class="style_show_1">B</span></p>
+                            </label>
+                            <label class="bg_input_1">
+                                <p class="ico_underline"><input type="checkbox" id="js_txtUnderline"><span class="style_show_1">U</span></p>
+                            </label>
+                            <div class="btn_group">
+                                <label class="bg_input_1" title="居左">
+                                    <p class="ico_alignleft"><input type="radio" name="js_txtAlign" value="left"><span class="txt_left"></span></p>
+                                </label>
+                                <label class="bg_input_1" title="居中">
+                                    <p class="ico_aligncenter"><input type="radio" name="js_txtAlign" value="center"><span class="txt_center"></span></p>
+                                </label>
+                                <label class="bg_input_1" title="居右">
+                                    <p class="ico_alignright"><input type="radio" name="js_txtAlign" value="right"><span class="txt_right"></span></p>
+                                </label>
+                            </div>
+
+                    </fieldset>
+                    
+                    <fieldset id="js_set_select" class="js_mod_setting js_set_p" style="">
+                        <legend class="c_tx1">文本(选中)设置</legend>
+                        <div id="editor-toolbar" class="fresheditor-toolbar">
+                            <div id="toolbarPosition" class="clear"></div>
+                            <div class="buttons">
+                                <div class="right"><a id="js_source_edit_btn" title="开启富文本在线编辑功能" class="contenteditable-icon" href="javascript:;">&nbsp;</a></div>
+                                <label class="bg_input_1" title="颜色">
+                                    <input type="color" id="js_colorNum" class="color">
+                                </label>
+                                <label class="bg_input_1">
+                                    <p class="ico_fontbold"><input type="checkbox" id="js_fontWeight"><span class="style_show_1">B</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p class="ico_underline"><input type="checkbox" id="js_txtUnderline"><span class="style_show_1">U</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p><input type="radio" value="left"><span class="style_show_1">清除格式</span></p>
+                                </label>
+                                <div class="btn_group">
+                                    <label class="bg_input_1">
+                                        <p><input type="radio" value="left"><span class="style_show_1">链接（当前页面）</span></p>
+                                    </label>
+                                    <label class="bg_input_1">
+                                        <p><input type="radio" value="center"><span class="style_show_1">链接（新页面）</span></p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset id="js_set_a" class="js_setting js_mod_setting">
+                        <legend class="c_tx1">链接设置</legend>
+                        <ul>
+                            <li id="js_url_cont" class="clearfix js_mod_pop_no" style="">
+                                <label>
+                                    <strong>链接</strong>
+                                    <input type="input" id="js_goAddress" class="int_txt" placeholder="链接地址" style="width:450px;">
+                                </label>
+                            </li>
+                            <li id="js_link_text_l" class="w_two">            
+                                <label>
+                                    <strong>文字</strong>
+                                    <input type="input" id="js_link_text" class="int_txt" placeholder="链接文字内容">
+                                </label>
+                            </li>
+                            <li id="js_picUrl_l" class="w_two">
+                                <label>
+                                    <strong>title</strong>
+                                    <input type="input" id="js_picUrl" class="int_txt" placeholder="鼠标移上去的提示文字">
+                                </label>
+                            </li>
+                            <li id="js_link_target_cont_in" class="clearfix js_mod_pop_no" style="">
+                                <strong>打开方式</strong>
+                                <label class="bg_input_1 bg_input_current"><input type="radio" name="js_link_target" value="_self" checked="checked"><span>同一页面打开</span></label>
+                                <label class="bg_input_1"><input type="radio" name="js_link_target" value="_blank"><span>新页面打开</span></label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    <fieldset id="js_set_img" class="js_setting js_mod_setting img_tabs">
+                        <legend class="c_tx1"> 
+                             <a href="#js_img_local" class="selected">上传文件</a>
+                             <a href="#js_img_remote">网络文件(url)</a>
+                        </legend>
+                        <div id="js_img_local" class="js_u_tab">
+                           <div id="js_drop_img_bg" class="pop_upload"><div class="qq-uploader"><div class="qq-upload-drop-area" style="display: none; "><span>将要上传的文件拖动到此区域</span></div><label class="bg_input_1 bg_input_upload" style="position: relative; overflow: hidden; direction: ltr; ">选择要上传的文件<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0; "></label><ul class="qq-upload-list"></ul></div></div>
+                        </div>
+                        
+                        <ul id="js_img_remote" class="js_u_tab" style="display:none">
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">文件地址</strong>
+                                    <input type="input" id="js_img_url" class="int_txt" placeholder="文件地址" style="width:450px;">
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    
+                    <fieldset id="js_set_iframe" class="js_setting js_mod_setting" style="">
+                        <legend class="c_tx1">框架(iframe)设置</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">框架地址</strong>
+                                    <textarea id="js_iframe_url" class="tta_txt"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset id="js_set_obj" class="js_setting" style="">
+                        <legend class="c_tx1">后台数据源</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">Item ID</strong>
+                                    <input type="number" id="js_api_input" class="int_number" placeholder="ID or URL">
+                                </label>
+
+                            </li>
+                            <li id="js_real_api_cont" class="clearfix" style="">
+                                <label>
+                                    <strong class="pri">真实API</strong>
+                                    <textarea id="js_api_url_input" class="tta_txt"></textarea>
+                                </label>
+                                <button id="js_api_btn" type="button" class="bg_input_1">获取数据</button>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    <!-- 原型数据增减 start -->
+                    <fieldset id="js_change_data" class="js_setting" style="">
+                        <legend class="c_tx1">数据增减</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <button type="button" class="bg_input_1" id="js_append_data_btn">增加</button>&nbsp;&nbsp;
+                                <button type="button" class="bg_input_1" id="js_remove_data_btn">减少</button>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- 原型数据增减 start -->
+                    
+                    <!--.js_switch_class 是js事件：用于切换class类 -->
+                    <!-- 播放歌曲列表 样式切换 -->
+                    <fieldset id="js_switch_musiclist" class="js_setting js_switch_class" style="">
+                        <legend class="c_tx1">样式切换</legend>
+                        <ul>
+                            <li class="clearfix js_sstyle"><!-- js_sstyle 设置播放器黑色或白色样式 -->
+                                 <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name" data-remove-class="skin_miniplayer_white skin_miniplayer_red skin_miniplayer_green skin_miniplayer_cyan skin_miniplayer_violet skin_miniplayer_orange skin_musiclist_red skin_musiclist_cyan skin_musiclist_green skin_musiclist_violet skin_musiclist_orange" data-add-class="skin_miniplayer_black skin_musiclist_black" data-sstyle="0"><span class="style_show_1">黑色</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name" data-remove-class="skin_miniplayer_black skin_miniplayer_red skin_miniplayer_green skin_miniplayer_cyan skin_miniplayer_violet skin_miniplayer_orange skin_musiclist_black skin_musiclist_red skin_musiclist_cyan skin_musiclist_green skin_musiclist_violet skin_musiclist_orange" data-add-class="skin_miniplayer_white skin_musiclist_white" data-sstyle="1"><span class="style_show_1">白色</span></p>
+                                </label>&nbsp;&nbsp;
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name" data-remove-class="skin_miniplayer_white skin_miniplayer_black skin_miniplayer_green skin_miniplayer_cyan skin_miniplayer_violet skin_miniplayer_orange skin_musiclist_black skin_musiclist_cyan skin_musiclist_green skin_musiclist_violet skin_musiclist_orange" data-add-class="skin_miniplayer_red skin_musiclist_red" data-sstyle="2"><span class="style_show_1">红色</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name" data-remove-class="skin_miniplayer_white skin_miniplayer_black skin_miniplayer_red skin_miniplayer_cyan skin_miniplayer_violet skin_miniplayer_orange skin_musiclist_black skin_musiclist_red skin_musiclist_cyan skin_musiclist_violet skin_musiclist_orange" data-add-class="skin_miniplayer_green skin_musiclist_green" data-sstyle="3"><span class="style_show_1">绿色</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name" data-remove-class="skin_miniplayer_white skin_miniplayer_black skin_miniplayer_red skin_miniplayer_green skin_miniplayer_violet skin_miniplayer_orange skin_musiclist_black skin_musiclist_red skin_musiclist_green skin_musiclist_violet skin_musiclist_orange" data-add-class="skin_miniplayer_cyan skin_musiclist_cyan" data-sstyle="4"><span class="style_show_1">蓝色</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name" data-remove-class="skin_miniplayer_white skin_miniplayer_black skin_miniplayer_red skin_miniplayer_green skin_miniplayer_cyan skin_miniplayer_orange skin_musiclist_black skin_musiclist_red skin_musiclist_cyan skin_musiclist_green skin_musiclist_orange" data-add-class="skin_miniplayer_violet skin_musiclist_violet" data-sstyle="5"><span class="style_show_1">紫色</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name" data-remove-class="skin_miniplayer_white skin_miniplayer_black skin_miniplayer_red skin_miniplayer_green skin_miniplayer_cyan skin_miniplayer_violet skin_musiclist_black skin_musiclist_red skin_musiclist_cyan skin_musiclist_green skin_musiclist_violet" data-add-class="skin_miniplayer_orange skin_musiclist_orange" data-sstyle="6"><span class="style_show_1">橙色</span></p>
+                                </label>
+                            </li>
+                            
+                            <li class="clearfix">
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name2" data-remove-class="mmrp_mod_musiclist2" data-add-class=""><span class="style_show_1">显示 全部按钮</span></p>
+                                </label>&nbsp;&nbsp;
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name2" data-remove-class="mmrp_mod_musiclist1" data-add-class="mmrp_mod_musiclist2"><span class="style_show_1">隐藏 全部按钮</span></p>
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name3" data-remove-class="" data-add-class="mmrp_mod_musiclist3"><span class="style_show_1">仅显示 点歌按钮</span></p>
+                                </label>
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name3" data-remove-class="mmrp_mod_musiclist3" data-add-class=""><span class="style_show_1">仅显示 播放按钮</span></p>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    <!-- 播放列表 歌名切换 -->
+                    <fieldset id="js_switch_msinger" class="js_setting" style="">
+                        <legend class="c_tx1">歌手显示切换</legend>
+                        <ul>
+                            <li class="clearfix js_sstyle"><!-- js_sstyle 设置播放器黑色或白色样式 -->
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_msinger" data-type="show"><span class="style_show_1">显示 歌手</span></p>
+                                </label>&nbsp;&nbsp;
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_msinger" data-type="hide"><span class="style_show_1">不显示 歌手</span></p>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    <!-- 链接列表切换设置 -->
+                    <fieldset id="js_switch_newslist" class="js_setting js_switch_class" style="">
+                        <legend class="c_tx1">样式切换</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name3" data-remove-class="list_type_decimal list_type_disc" data-add-class=""><span class="style_show_1">无</span></p>
+                                </label>&nbsp;&nbsp;
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name3" data-remove-class="list_type_disc list_type_none" data-add-class="list_type_decimal"><span class="style_show_1">数字</span></p>
+                                </label>&nbsp;&nbsp;
+                                 <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name3" data-remove-class="list_type_decimal list_type_none " data-add-class="list_type_disc"><span class="style_show_1">圆点</span></p>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    <!-- 单个视频样式切换 -->
+                    <fieldset id="js_switch_videoplay" class="js_setting js_switch_class" style=" ">
+                        <legend class="c_tx1">样式切换</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name4" data-remove-class="mmrp_mod_videoplay2" data-add-class=""><span class="style_show_1">带标题</span></p>
+                                </label>&nbsp;&nbsp;
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name4" data-remove-class="" data-add-class="mmrp_mod_videoplay2"><span class="style_show_1">无标题</span></p>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    <fieldset id="js_switch_timer" class="js_setting js_switch_class" style="">
+                        <legend class="c_tx1">样式切换</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name5" data-remove-class="mmrp_mod_timer2 mmrp_mod_timer3" data-add-class=""><span class="style_show_1">横向一</span></p>
+                                </label>&nbsp;&nbsp;
+
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name5" data-remove-class="mmrp_mod_timer1 mmrp_mod_timer2" data-add-class="mmrp_mod_timer3"><span class="style_show_1">横向二</span></p>
+                                </label>
+                                &nbsp;&nbsp;
+                                <label class="bg_input_1">
+                                    <p><input type="radio" name="js_style_name5" data-remove-class="mmrp_mod_timer1 mmrp_mod_timer3" data-add-class="mmrp_mod_timer2"><span class="style_show_1">竖向</span></p>
+                                </label>
+                               
+                            </li>
+                            
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_txt1_a" class="js_setting" style="">
+                        <legend class="c_tx1">用户微博ID列表</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">用户列表</strong>
+                                    <textarea id="js_set_txt1" class="tta_txt" placeholder="请输入要收听的用户微博id列表，用英文逗号（,）隔开。如：qqmusic,vip_music,qqshow"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_txt2_a" class="js_setting" style="">
+                        <legend class="c_tx1">收听并转发设置</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">用户微博ID列表</strong>
+                                    <textarea id="js_weibo_ids" class="tta_txt" data-relation="weibo_ids" placeholder="请输入要收听的用户微博id列表，用英文逗号（,）隔开。如：qqmusic,vip_music,qqshow"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">转发内容</strong>
+                                    <textarea id="js_set_forwarding" class="tta_txt" data-relation="default_txt" placeholder="默认要转发的微博内容"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">子标题</strong>
+                                    <textarea id="js_set_sub_title" class="tta_txt" data-relation="sub_title" placeholder="可不填，默认为空"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <!-- 收听并转发 并领取CDKEY -->
+                <fieldset id="js_set_txt2_cd" class="js_setting" style="">
+                        <legend class="c_tx1">收听、转发并领取CDKey设置</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">用户微博ID列表</strong>
+                                    <textarea id="js_weibo_ids_cd" class="tta_txt" data-relation="weibo_ids" placeholder="请输入要收听的用户微博id列表，用英文逗号（,）隔开。如：qqmusic,vip_music,qqshow"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">转发内容</strong>
+                                    <textarea id="js_set_forwarding_cd" class="tta_txt" data-relation="default_txt" placeholder="默认要转发的微博内容"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">活动期号</strong>
+                                    <input type="number" id="js_activeid_cd" class="int_number" data-relation="activeid">
+                                </label>
+                            </li>
+                             <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">结束时间</strong>
+                                    <input type="text" id="js_end_date_cd" class="int_txt" data-relation="end_date">
+                                </label>
+                            </li>
+                             <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">cdkey 标题</strong>
+                                    <textarea id="js_cdkey_title_cd" class="tta_txt" data-relation="cdkey_title" placeholder="可不填，默认为空"></textarea>
+                                </label>
+                            </li>
+                             <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">cdkey 内容1</strong>
+                                    <textarea id="js_cdkey_cont1_cd" class="tta_txt" data-relation="cdkey_contont1" placeholder="可不填，默认为空"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">cdkey 内容2</strong>
+                                    <textarea id="js_cdkey_cont2_cd" class="tta_txt" data-relation="cdkey_contont2" placeholder="可不填，默认为空"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">游戏网址</strong>
+                                    <textarea id="js_game_url" class="tta_txt" data-relation="game_url" placeholder=""></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_txt1_b" class="js_setting" style="">
+                        <legend class="c_tx1">分享到微博</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享URL</strong>
+                                    <textarea id="js_share_wb_url" class="tta_txt" data-relation="weibo_url" placeholder="请输入要分享到微博的URL"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享内容</strong>
+                                    <textarea id="js_share_wb_cont" class="tta_txt" data-relation="weibo_content" placeholder="请输入要分享到微博的内容"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享图片</strong>
+                                    <textarea id="js_share_wb_img" class="tta_txt" data-relation="weibo_pic" placeholder="请输入要分享到微博的图片链接地址"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_txt1_c" class="js_setting" style="">
+                        <legend class="c_tx1">分享到空间</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享URL</strong>
+                                    <textarea id="js_share_url" class="tta_txt" data-relation="qzone_url" placeholder="请输入要分享到空间的URL"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享标题</strong>
+                                    <textarea id="js_share_title" class="tta_txt" data-relation="qzone_title" placeholder="请输入要分享到空间的标题"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享摘要</strong>
+                                    <textarea id="js_share_summ" class="tta_txt" data-relation="qzone_summary" placeholder="请输入要分享到空间的摘要"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享内容</strong>
+                                    <textarea id="js_share_cont" class="tta_txt" data-relation="qzone_content" placeholder="请输入要分享到空间的内容"></textarea>
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">分享图片</strong>
+                                    <textarea id="js_share_img" class="tta_txt" data-relation="qzone_pic" placeholder="请输入要分享到空间的图片链接地址"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_timer" class="js_setting" style="">
+                        <legend class="c_tx1">计时抢票设置</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">活动ID</strong>
+                                    <input type="number" id="js_active_id" class="int_number" data-relation="active_id">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">开始时间</strong>
+                                   <input type="text" id="js_start_date" class="int_txt" data-relation="start_date">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">结束时间</strong>
+                                    <input type="text" id="js_end_date" class="int_txt" data-relation="end_date">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong style="width:80px;">抢票开始时刻</strong>
+                                    <input min="0" max="24" step="1" type="number" id="js_start_hour" class="int_number" data-relation="start_hour">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong style="width:80px;">抢票结束时刻</strong>
+                                    <input min="0" max="24" step="1" type="number" id="js_end_hour" data-relation="end_hour" class="int_number">
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_vote" class="js_setting" style="">
+                        <legend class="c_tx1">投票设置</legend>
+                        <ul>
+                            <li class="clearfix" id="js_set_vote_li">
+                                <label>
+                                    <strong class="pri">弹窗颜色</strong>
+                                    <select id="js_pop_color" data-relation="r_color">
+                                        <option style="background:#dcf013" value="1">颜色1</option>
+                                        <option style="background:#ea793f" value="2">颜色2</option>
+                                        <option style="background:#eca45c" value="3">颜色3</option>
+                                        <option style="background:#4cba4a" value="4">颜色4</option>
+                                        <option style="background:#5d74b1" value="5">颜色5</option>
+                                        <option style="background:#98c6d5" value="6">颜色6</option>
+                                        <option style="background:#dd30ae" value="7">颜色7</option>
+                                        <option style="background:#bdf752" value="8">颜色8</option>
+                                        <option style="background:#ee335f" value="9">颜色9</option>
+                                        <option style="background:#ffbf2a" value="0">颜色0</option>           
+                                    </select>
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>
+                                    <strong class="pri">活动ID</strong>
+                                    <input type="number" id="js_no_id" class="int_number" data-relation="no">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">开始时间</strong>
+                                   <input type="text" id="js_start_time" class="int_txt" data-relation="start_time">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">结束时间</strong>
+                                    <input type="text" id="js_end_time" class="int_txt" data-relation="end_time">
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_timer" class="js_setting" style="">
+                        <legend class="c_tx1">计时抢票设置</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">活动ID</strong>
+                                    <input type="number" id="js_active_id" class="int_number" data-relation="active_id">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">开始时间</strong>
+                                   <input type="text" id="js_start_date" class="int_txt" data-relation="start_date">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">结束时间</strong>
+                                    <input type="text" id="js_end_date" class="int_txt" data-relation="end_date">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong style="width:80px;">抢票开始时刻</strong>
+                                    <input min="0" max="24" step="1" type="number" id="js_start_hour" class="int_number" data-relation="start_hour">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong style="width:80px;">抢票结束时刻</strong>
+                                    <input min="0" max="24" step="1" type="number" id="js_end_hour" data-relation="end_hour" class="int_number">
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_set_vote" class="js_setting" style="">
+                        <legend class="c_tx1">投票设置</legend>
+                        <ul>
+                            <li class="clearfix" id="js_set_vote_li">
+                                <label>
+                                    <strong class="pri">弹窗颜色</strong>
+                                    <select id="js_pop_color" data-relation="r_color">
+                                        <option style="background:#dcf013" value="1">颜色1</option>
+                                        <option style="background:#ea793f" value="2">颜色2</option>
+                                        <option style="background:#eca45c" value="3">颜色3</option>
+                                        <option style="background:#4cba4a" value="4">颜色4</option>
+                                        <option style="background:#5d74b1" value="5">颜色5</option>
+                                        <option style="background:#98c6d5" value="6">颜色6</option>
+                                        <option style="background:#dd30ae" value="7">颜色7</option>
+                                        <option style="background:#bdf752" value="8">颜色8</option>
+                                        <option style="background:#ee335f" value="9">颜色9</option>
+                                        <option style="background:#ffbf2a" value="0">颜色0</option>           
+                                    </select>
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>
+                                    <strong class="pri">活动ID</strong>
+                                    <input type="number" id="js_no_id" class="int_number" data-relation="no">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">开始时间</strong>
+                                   <input type="text" id="js_start_time" class="int_txt" data-relation="start_time">
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>
+                                    <strong class="pri">结束时间</strong>
+                                    <input type="text" id="js_end_time" class="int_txt" data-relation="end_time">
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- 视频直播设置 start -->
+                    <fieldset id="js_set_live" class="js_setting" style="">
+                        <legend class="c_tx1">视频直播设置</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">播放类型</strong>
+                                     <input type="text" id="js_playtype" class="int_txt" data-relation="playtype" placeholder="1表示直播，2表示点播">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">直播ID</strong>
+                                   <input type="text" id="js_livevid" class="int_txt" data-relation="livevid" placeholder="直播时需要输入直播ID">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">点播ID</strong>
+                                   <input type="text" id="js_vbarid" class="int_txt" data-relation="vbarid" placeholder="点播时需要输入点播ID">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">视频ID列表</strong>
+                                    <textarea id="js_vidlist" class="tta_txt" data-relation="vidlist" placeholder="点播时需要输入ID列表，多个ID用英文逗号“,”分隔。直播时不需要输入"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- 视频直播设置 end -->
+                    <!-- 整张下载 整张收听 start -->
+                    <fieldset id="js_album_container" class="js_setting" style="">
+                        <legend class="c_tx1">整张下载/收听</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">专辑ID</strong>
+                                    <input type="number" id="js_album_id" data-type="play" class="int_number" data-relation="activeid">
+                                </label>
+                            </li>
+                            
+                        </ul>
+                    </fieldset>
+                    <fieldset id="js_down_album_container" class="js_setting" style="">
+                        <legend class="c_tx1">整张下载</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">专辑ID</strong>
+                                    <input type="number" id="js_down_album_id" data-type="down" class="int_number" data-relation="activeid">
+                                </label>
+                            </li>
+                            
+                        </ul>
+                    </fieldset>
+                    <!-- 活动规则 start -->
+                    <fieldset id="js_dialog_eventrule" class="js_setting" style="">
+                        <legend class="c_tx1">活动规则</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <textarea id="js_dialog_cont" class="tta_txt" style="width: 582px; height: 220px;" placeholder="请输入活动规则，回车换行则代表一条规则"></textarea>
+                            </li>
+                            
+                        </ul>
+                    </fieldset>
+                    <!-- 收藏所有歌曲 start -->
+                    <fieldset id="js_collect_all_container" class="js_setting" style="">
+                        <legend class="c_tx1">收藏所有歌曲</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">歌单名称</strong>
+                                    <input type="text" id="js_mlist_name" class="int_txt" data-relation="listname">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri">歌单图片URL</strong>
+                                    <textarea id="js_mlist_pic" class="tta_txt" data-relation="pic" placeholder="请输入要收藏的图片链接地址"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- 播放歌曲列表全部歌单 start -->
+                    <fieldset id="js_play_list_container" class="js_setting" style="">
+                        <legend class="c_tx1">播放列表全部歌曲</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri150">关联模块itemid列表</strong>
+                                    <input type="text" id="js_play_list_id" class="int_txt" style="width:330px;" data-relation="midlist" placeholder="输入模块Id列表，用“英文”逗号“,”分隔">
+                                </label>
+                            </li>
+                            
+                        </ul>
+                    </fieldset>
+                    <!-- 收藏播放列表歌曲 start -->
+                    <fieldset id="js_collect_list_container" class="js_setting" style="">
+                        <legend class="c_tx1">收藏播放列表歌曲</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri150">关联模块itemid列表</strong>
+                                    <input type="text" id="js_collect_list_id" class="int_txt" style="width:330px;" data-relation="midlist" placeholder="输入模块Id列表，用" 英文"逗号","分隔"="">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri150">歌单名称</strong>
+                                    <input type="text" id="js_list_mlist_name" class="int_txt" data-relation="listname">
+                                </label>
+                            </li>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri150">歌单图片URL</strong>
+                                    <textarea id="js_list_mlist_pic" class="tta_txt" data-relation="pic" placeholder="请输入要收藏的图片链接地址"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- 微博发表框 start -->
+                    <fieldset id="js_postweibo_container" class="js_setting" style="">
+                        <legend class="c_tx1">微博发表框</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong>话题</strong>
+                                    <textarea id="js_list_mlist_topic" class="tta_txt" data-relation="topic" placeholder="请输入要分享的话题"></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <!-- 微博发表框 start -->
+                    <fieldset id="js_tabs_container" class="js_setting" style="">
+                        <legend class="c_tx1">选项卡设置</legend>
+                        <ul>
+                            <li class="clearfix">
+                                <label>
+                                    <strong class="pri90">切换类型</strong>
+                                    <select id="js_tabs_type" data-relation="etype">
+                                            <option value="0">鼠标移上去切换</option>
+                                            <option value="1">鼠标点击切换</option>
+                                        </select>
+                                </label>
+                                <label>
+                                    <strong class="pri90">选项卡个数</strong>
+                                    <button class="bg_input_1 js_tabs_no" data-action="append">+</button>
+                                </label>
+                                <label><button class="bg_input_1 js_tabs_no" data-action="remove">-</button></label>
+                            </li>
+                            <ul id="js_tab_list">
+                                
+                            </ul>
+                            <!-- 用户复制的代码片段 -->
+                            <div style="display:none;">
+                                <li id="js_tab_clone" class="clearfix">
+                                    <label>
+                                        <strong class="pri90">Tab名称</strong>
+                                        <input tab_type="name" type="text" class="js_tab_link int_txt_425" tab_index="">
+                                    </label>
+                                    <label>
+                                        <strong class="pri90">绑定ID</strong>
+                                        <input tab_type="id" class="js_tab_ids int_txt_425" data-relation="mod_idlist" placeholder="请输入需要关联的ID列表，用英文逗号“,”分隔">
+                                    </label>
+                                </li>
+                            </div>
+                        </ul>
+                    </fieldset>
+                <div class="dialog_op"><button id="js_close_panel" class="bg_input_1">确认并关闭</button></div>
+           
+        </div>
+    </div><!--  -->
+</div>
+            </section>
+        </div></div>
+				</fieldset>
+				
+			</form>
+	</div>
+</div>
+<footer class="mmrp_sys_footer">
+	<div>
+		<p class="copyright"><span>&copy;</span> 2011-2012 <a href="about.htm">MMRP Dev.team</a></p>
+		<p class="support">Power by HTML5 &amp; CSS3. Support for <a href="http://www.google.com/chrome/" target="_blank">Chrome.</a></p>
+	</div>
+</footer>
+
+</body>
+</html>

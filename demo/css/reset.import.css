@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* reset */
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, lengend, button, input, textarea, th, td { margin: 0; padding: 0; }
+body, button, input, select, textarea,th { font-size:12px;line-height:1.5em;font-family:Tahoma,"hiragino sans gb",Helvetica,Arial;} /* \5b8b\4f53 是 宋体*/
+h1, h2, h3, h4, h5, h6 { font-size:100%; }
+li { list-style:none; }
+/*legend { color:#000; }*//*legend在IE下，如果计算机使用的是经典主题，其颜色是黑色；如果XP主题，其颜色是蓝色(#0046D5)*/
+/*fieldset, */
+img{ border:0 none; -ms-interpolation-mode:bicubic; }
+/* input[type="checkbox"],input[type="radio"]{ border:0 none; } */
+/*input[type="button"]{outline: 0; cursor:pointer; _width: 0; overflow:visible !ie;}*/
+input[type="button"],input[type='submit']{cursor:pointer;}
+button{cursor:pointer;}
+/*button, input, select, textarea { font-size:100%; }*/
+table { border-collapse:collapse; border-spacing:0; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+/*q:before, q:after{content:'';}*/
+
+@font-face {
+	font-family: mmrp;
+	src: url("mmrp.otf");
+}
+@font-face {
+	font-family: logo;
+	src: url("telegrafico.ttf");
+}
+::-webkit-scrollbar{width:12px;height:12px;}
+::-webkit-scrollbar-button{display:none;}
+::-webkit-scrollbar-track{background-color:black;}
+::-webkit-scrollbar-track-piece{background:#fff;border-left:1px solid rgba(0,0,0,.1);}
+::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.2);box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);}
+::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,0.4)}

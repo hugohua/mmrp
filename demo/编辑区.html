@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The MultiMedia Release Platform</title>
+<link rel="stylesheet" href="css/mmrp_v2.css" />
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>-->
+<script src="http://www.pufen.net/labs/global/script/jquery.js"></script>
+</head>
+<body>
+<!--导航组件 S-->
+<header class="mmrp_sys_header">
+    <section> 
+    	<h1>MMRP</h1>
+        <ul class="mod_nav">
+            <li><a href="创建活动.html">新建流程</a></li>
+            <li><a href="流水记录.html">流水查询</a></li>
+            <li><a href="统计.html">统计查询</a></li>
+        </ul>
+    	<div class="mod_user"><a href="##">登录</a> [ pufentan | <a href="##">注销</a> ]</div>
+    	<div class="pagectrl"><a href="#" class="mmrp_icon_prev" title="撤销">撤销</a><a href="#" class="mmrp_icon_next" title="重做">重做</a><a href="#" class="mmrp_icon_grid" title="显示网格">网格</a><a href="#" class="mmrp_icon_cursor" title="显示指针">指针</a></div>
+    </section> 
+    <ul class="mod_nav_sub">
+        <li><a href="##">背景上传</a></li>
+        <li><a href="##">配置修改</a></li>
+        <li><a href="##">添加模块</a></li>
+        <li><a href="##">预览效果</a></li>
+        <li>
+            <a href="##">保存为草稿</a><i class="arrow"></i>
+            <ul class="mod_nav_child" style="display:">
+                <li><a href="##">保存为模板</a></li>
+                <li><a href="##">保存为草稿</a></li>
+            </ul>
+        </li>
+        <li><a href="##">内容发布</a></li>
+    </ul>
+</header>
+<!--导航组件 E-->
+<div class="mmrp_sys_editarea" style="height:5000px;">
+    <ul>
+        <li style="height:1000px;font-size:500px;line-height:1000px;text-align:center">1</li>
+        <li style="height:1000px;font-size:500px;line-height:1000px;text-align:center">2</li>
+        <li style="height:1000px;font-size:500px;line-height:1000px;text-align:center">3</li>
+        <li style="height:1000px;font-size:500px;line-height:1000px;text-align:center">4</li>
+        <li style="height:1000px;font-size:500px;line-height:1000px;text-align:center">5</li>
+    </ul>
+</div>
+<!--侧边栏组件 S-->
+<div class="mmrp_sidebar" id="mmrp_sidebar">
+    <div class="mmrp_sidebar_tab">
+        <ul>
+            <li>基础类</li>
+            <li class="on">歌曲类</li>
+            <li>视频类</li>
+            <li>社交类</li>
+            <li>其他类</li>
+            <li class="btn_tab"><span></span></li>
+        </ul>
+    </div>
+    <!--组件区域开始-->
+    <div class="mmrp_sidebar_assembly">
+        <div class="assembly_box">
+            <ul>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+                <li>
+                    <img src="http://tacs.oa.com/img.php?150x80" alt="图片"><span>文字链接</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--组件区域结束-->
+</div>
+<!--侧边栏组件 E-->
+<footer class="mmrp_sys_footer" style="display:none;">
+	<div>
+		<p class="copyright"><span>&copy;</span> 2011-2012 <a href="about.htm">MMRP Dev.team</a></p>
+		<p class="support">Power by HTML5 &amp; CSS3. Support for <a href="http://www.google.com/chrome/" target="_blank">Chrome.</a></p>
+	</div>
+</footer>
+<script type="text/javascript">
+    
+$(".mmrp_sidebar_tab li:not(:last-child)").click(function(){
+    $(".mmrp_sidebar_tab li").removeClass("on");
+    $(this).addClass("on");
+})
+$(".btn_tab").toggle(
+    function(){
+        $("#mmrp_sidebar").addClass("open");
+    },
+    function(){
+        $("#mmrp_sidebar").removeClass("open");
+    }
+)
+$(".arrow").toggle(
+    function(){
+        $(this).next().addClass("mod_nav_child_open");
+    },
+    function(){
+        $(this).next().removeClass("mod_nav_child_open");
+    }
+)
+
+</script>
+</body>
+</html>

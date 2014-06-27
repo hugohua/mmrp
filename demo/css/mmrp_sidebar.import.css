@@ -1,0 +1,36 @@
+/*以下侧边栏样式于HUIHUIXIAO编写，如有雷同，纯属巧合*/
+.mmrp_sidebar{position:fixed;top:100px;bottom:30px;left:0;/*width:249px;*/z-index:100;}
+.mmrp_sidebar .mmrp_sidebar_tab{background:#3b3b3b;position:absolute;width:26px;top:0;right:-26px;box-shadow:0 0 8px rgba(0,0,0,0.8);}
+/*.mmrp_sidebar .mmrp_sidebar_tab li:first-child{border-radius:0 5px 0 0;}
+.mmrp_sidebar .mmrp_sidebar_tab li:last-child{border-radius:0 0 5px 0;background:#888;}*/
+.mmrp_sidebar .mmrp_sidebar_tab ul:after{clear: both;display:block;content:'\20';}
+.mmrp_sidebar .mmrp_sidebar_tab li{background:#3b3b3b;float:left;text-align:center;color:#ccc;width:14px;padding:8px 6px;cursor:pointer;}
+.mmrp_sidebar .mmrp_sidebar_tab li:hover{background:#2B2B2B;-webkit-transition: color .5s linear, background-color .5s linear;border-radius:3px;}
+.mmrp_sidebar .mmrp_sidebar_tab li.on{background-color:#1B1B1B;font-weight:bold;color:#fff;position:relative;padding-right:12px;box-shadow:0 0 3px rgba(0,0,0,0.8);/*border-radius:0 5px 5px 0;*/}
+.mmrp_sidebar .mmrp_sidebar_tab li.on:hover{background-color:#1B1B1B;}
+.mmrp_sidebar .btn_tab{height:50px;cursor:pointer;}
+.mmrp_sidebar .btn_tab span{display:block;border-left:2px solid #ffffff;border-top:2px solid #ffffff;width:9px;height:9px;float:Left;-webkit-transform:rotate(-45deg);margin:20px 0 0 4px;}
+.mmrp_sidebar.open .btn_tab span{-webkit-transform:rotate(-225deg);margin:20px 0 0 -2px;}
+.mmrp_sidebar .mmrp_sidebar_assembly{width:181px;height:100%;background:#1b1b1b;border:1px solid #1b1b1b;border-left:none;
+	box-shadow:0 0 8px rgba(0,0,0,0.8);
+    -webkit-transition-property:margin-left;
+	-webkit-transition-duration:0.50s;
+	-webkit-transition-delay:0s;
+}
+.mmrp_sidebar.open .mmrp_sidebar_assembly{
+	margin-left:-216px;
+}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box{width:160px;overflow:auto;height:100%;padding:0 10px;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box ul{width:150px;padding:10px 0;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box ul li{float:left;width:150px;height:80px;margin: 0 0 10px 0;cursor:move;position:relative;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box ul li span{line-height:20px;text-indent:10px;text-align:center; color:#fff;position:absolute;bottom:0;left:0;width:100%;text-overflow:ellipsis; overflow:hidden; white-space:nowrap;background:rgba(0,0,0,.3);}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box img{width:150px;height:80px;vertical-align: top;}
+
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box::-webkit-scrollbar{width:10px;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box::-webkit-scrollbar-button:vertical{display:none;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box::-webkit-scrollbar-track:vertical{background-color:black;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box::-webkit-scrollbar-track-piece{background:#1b1b1b;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box::-webkit-scrollbar-thumb:vertical{background-color:#404040;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box::-webkit-scrollbar-corner:vertical{background-color:#535353;}
+.mmrp_sidebar .mmrp_sidebar_assembly .assembly_box::-webkit-scrollbar-resizer:vertical{background-color:#FF6E00;}
+/*侧边栏样式结束*/

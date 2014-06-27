@@ -1,0 +1,20 @@
+/*=======================================================
+	文件名：
+	作者：g_ISUX_DM_FD Hugohua
+	说明：MMRP_V2 基本配置信息表单 样式。
+=======================================================*/
+.mmrp_sys_form{margin:0 auto;width:1004px;padding:70px 0 24px 0;}
+.mmrp_sys_form .cont{padding:40px 0;}
+.mmrp_sys_form .mmrp_sys_projinfo{color:#999;}
+.mmrp_sys_form .mmrp_sys_projinfo input{width:400px;}
+.mmrp_sys_form .mmrp_sys_projinfo table{border-collapse:collapse;border-spacing:0;}
+.mmrp_sys_form .mmrp_sys_projinfo td,
+.mmrp_sys_form .mmrp_sys_projinfo th{padding:6px 0;font-weight:normal;}
+.mmrp_sys_form .mmrp_sys_projinfo textarea{line-height:20px;height:60px;width:400px;}
+.mmrp_sys_form .mmrp_sys_projinfo select{color:#222222;font-size:14px;min-width:180px;padding: 3px 2px 3px;border: 1px solid #ccc;background:#fff;cursor:pointer;}
+.mmrp_sys_form .mmrp_sys_projinfo .path{width:216px;}
+.mmrp_sys_form .mmrp_sys_projstats{color:#999;}
+.mmrp_sys_form .mmrp_sys_projstats input{width:160px;}
+.mmrp_sys_form .mmrp_sys_projstats dt{display:inline-block;vertical-align:top;line-height:26px;font-weight:bold;}
+.mmrp_sys_form .mmrp_sys_projstats dd{margin:0 0 20px 0;}
+.mmrp_sys_form .mmrp_sys_projstats dd .mmrp_sys_btn{margin:0 0 0 10px;}
