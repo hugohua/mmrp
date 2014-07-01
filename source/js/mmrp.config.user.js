@@ -1,6 +1,7 @@
 define({
 	//网站根目录
-	root:"http://localhost/labs/mmrp_v3/source/",
+	root:"http://localhost/github/mmrp/source/",
+
 
 
 

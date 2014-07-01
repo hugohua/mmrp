@@ -150,6 +150,7 @@
 	margin: 0;
 	padding: 0;
 	height: 11px;
+    outline: none;
 }
 .colorpicker_hex {
 	position: absolute;

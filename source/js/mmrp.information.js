@@ -24,8 +24,8 @@ define(function(require, exports, module) {
 		form		:'#js_form'
 	};
 	
-	var initPageInfo = function(){
-		page_id && RestApi.getPageById(page_id).success(function(data){
+	exports.initPageInfo = function(page_id){
+		RestApi.getPageById(page_id).success(function(data){
 			if(data && data.data && data.data.value){
 				PageInfo.setPageInfo(data.data.value);
 			};
@@ -51,6 +51,7 @@ define(function(require, exports, module) {
 		var tpl = $('#js_type_tmpl').html(),
 			html = Mustache.to_html(tpl, data);
 		$('#js_page_type').append(html);
+        console.log(html,'html');
 	};
 	
 	
@@ -87,13 +88,16 @@ define(function(require, exports, module) {
    		
    };
    
-	
+
+    exports.info = function(){
+
+    };
 	
 	
 	exports.init = function(){
-		Fun.initGlobal();
+//		Fun.initGlobal();
 		Events.init();
-		initPageInfo();
+//		initPageInfo();
 		getUrlList();
 		Fun.validateEvent(model.form);
 	}  

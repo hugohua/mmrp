@@ -79,9 +79,9 @@ define(function(require, exports, module) {
 	
 	var initUploadEvents = function(){
 		$('#js_shift_b').one('click.one',function(){
-			Events.init();
+//			Events.init();
 			ImgLocal.init();
-			ImgNetwork.init();
+//			ImgNetwork.init();
 		});
 	};
 	

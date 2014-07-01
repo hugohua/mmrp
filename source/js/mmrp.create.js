@@ -5,7 +5,8 @@ define(function(require, exports, module) {
     	localStore = require('./mmrp.localstore'),
     	Fun = require('./mmrp.func'),
     	c = require('./mmrp.config.user'),
-    	RestApi = require('./mmrp.rest');
+    	RestApi = require('./mmrp.rest'),
+        Information = require('./mmrp.information');
     
    	require('jquery.pubsub')($);
    	
@@ -57,7 +58,7 @@ define(function(require, exports, module) {
 	/**
 	 * 获取layout 
 	 */
-	var getLayout = function(){
+	exports.getLayout = function(){
 		var data = localStore.getLayoutData();
 		if(data){
 			listLayoutHtml(data.data);
@@ -90,6 +91,23 @@ define(function(require, exports, module) {
 			}
 		})
 	};
+
+    /**
+     * 创建页面成功后回调
+     * @param data
+     */
+    var createPageSuccess = function(data){
+        if(data && !data.error){
+//            var url = Mustache.to_html('{{url}}?id={{page_id}}&theme_id={{theme_id}}&template_id={{template_id}}&layout_id={{layout}}', data);
+            Fun.setUrlParam('page_id',data.page_id);
+            Fun.setUrlParam('theme_id',data.theme_id);
+            Fun.setUrlParam('template_id',data.template_id);
+            Fun.setUrlParam('layout_id',data.layout);
+            Information.initPageInfo(data.page_id);
+        }else{
+            alert(msg.error);
+        }
+    };
 	
 	var Events = {
 		
@@ -156,12 +174,13 @@ define(function(require, exports, module) {
 					data:layout
 				});
 				
-				req.success(function(data){
+				req.done(function(data){
 					$.extend(data,{
 						layout:layout,
 						url:url
-					})
-					$.publish('page/create',data);
+					});
+                    createPageSuccess(data);
+//					$.publish('page/create',data);
 				});
 				return false;
 			});
@@ -210,15 +229,17 @@ define(function(require, exports, module) {
 	};
 	
 	
-	
+
 	
 	
 	exports.init = function(){
-		Fun.initGlobal();
-		Events.init();
-		getPageListByState(1);
-		getLayout();
-	}  
+//		Fun.initGlobal();
+//		Events.init();
+//		getPageListByState(1);
+        exports.getLayout();
+        Events.createPageEvent();
+        Information.init();
+	}
     
     
 })  

@@ -21,7 +21,9 @@ define(function(require, exports, module) {
         SaveTmpl = require('./mmrp.save.template'),
         Publish = require('./mmrp.mod.publish'),
         //Events
-        PopModals = require('./mmrp.mod.modals');
+        PopModals = require('./mmrp.mod.modals'),
+        //Page
+        Create = require('./mmrp.create');
     
    	
    	require('jquery.contenteditable')($);
@@ -34,7 +36,7 @@ define(function(require, exports, module) {
 		
 		mod_container		:"#js_mod_container",							//页面容器
 		act_content			:"#js_act_content",								//box操作区域容器
-		style_pre			:"m_",									//样式前缀
+		style_pre			:"m_"									//样式前缀
 		
 	};
 	
@@ -191,6 +193,8 @@ define(function(require, exports, module) {
 		$('body').bind('contextmenu', function(){
 			return false;
 		});
+        //新建
+        Create.init();
 	};
     
     

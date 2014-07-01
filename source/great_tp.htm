@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
 <head>
@@ -741,6 +740,63 @@
 		</div>
 <!-- 快捷键 E -->
 
+<!-- 基本信息 S -->
+<div id="J_info" class="modal pop_guide">
+    <div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>基本信息</h3></div>
+    <div class="modal-body">
+        <div id="js_item_list" class="cont">
+            <ul>
+                <li><a title="新建带有YQQ头尾的页面" class="cover_page create js_new_template_btn" href="new.htm" data-layout="1"><img src="img/add_template_item.png" alt="新建模板" /><span class="tag">常规</span></a></li>
+
+                <li><a title="新建没有头部和尾部的空白页面" class="cover_page create js_new_template_btn" href="new.htm" data-layout="2"><img src="img/add_template_item.png" alt="新建模板" /><span class="tag">IFRAME</span></a></li>
+            </ul>
+        </div>
+        <form id="js_form" class="mmrp_sys_projinfo form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="js_page_name">*需求名称</label>
+                <div class="controls"><input type="text" id="js_page_name" data-db-name="page_name" autofocus data-validate="required" placeholder="(如：杨千桦首唱会）将出现您要创建的网页的浏览器标题上" /><span class="help-inline" style="display:none;">(如：杨千桦首唱会）将出现您要创建的网页的浏览器标题上</span></div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="js_page_description">*需求描述</label>
+                <div class="controls"><textarea rows="3" id="js_page_description" data-db-name="page_description" data-validate="required" placeholder="建议80个字以内，展示在搜索引擎上；吸引人的描述，能带来更大的点击率哦！"></textarea><span class="help-inline" style="display:none;">建议80个字以内，展示在搜索引擎上；吸引人的描述，能带来更大的点击率哦！</span></div>
+            </div>
+            <div class="control-group hide">
+                <label class="control-label" data-db-name="page_authorizer">编辑权限</label>
+                <div class="controls">
+                    <span id="js_temp"></span>
+                    <script type="text/javascript">
+//                        try{
+//                            new Tcc.UserChooser({id: 'js_page_authorizer', name: 'data[Ticket][owner1]', choosertype: 1});
+//                        }catch(err){
+//                            $('#js_temp').append('<input type="text" id="js_page_authorizer" placeholder="请输入有权限编辑本活动的用户" />');
+//                        }
+                    </script><span class="help-inline" style="display:none;">请输入有权限编辑本活动的用户，可授权该活动给其他人编辑</span></div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="js_page_directory">*活动路径</label>
+                <div class="controls">
+                    <select id="js_page_type" data-db-name="page_type">
+
+                    </select>
+                    <input id="js_page_directory" data-validate="required"  data-db-name="page_directory" type="text" class="path" placeholder="项目名_时间_活动名(英文字母)" />
+                    <span class="help-inline" style="display:none;">请输入英文、数字、下划线等，勿输入中文或特殊字符</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="js_page_date">创建时间</label>
+                <div class="controls"><!--<p id="js_page_date" class="help-block"></p>-->
+                    <input id="js_page_date" data-validate="required"  data-db-name="page_start_date" type="text" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" id="js_edit_btn" class="btn btn-primary" href="great_tp.htm">保存</button>
+        <button data-dismiss="modal" class="btn">关闭</button>
+    </div>
+</div>
+<!-- 基本信息 E -->
+
 <script id="js_cate_tmpl" type="text/template">
 {{#value}}
 <li {{#cate_1}}class="on"{{/cate_1}} data-id="js_draggable_{{cate_id}}">{{cate_name}}</li>
@@ -751,6 +807,18 @@
 {{#value}}
 <ul id="js_draggable_{{cate_id}}" {{^cate_1}}style="display:none{{/cate_1}}"></ul>
 {{/value}}
+</script>
+
+<script id="js_layout_tmpl" type="text/template">
+    {{#value}}
+    <li><a class="cover_page create js_new_template_btn" href="new.htm" data-layout="{{layout_id}}"><img src="img/add_template_item.png" alt="新建模板" /><span class="tag">{{layout_name}}</span></a></li>
+    {{/value}}
+</script>
+
+<script id="js_type_tmpl" type="text/template">
+    {{#value}}
+    <option value="{{url_link}}">{{url_link}}</option>
+    {{/value}}
 </script>
 
 <script>

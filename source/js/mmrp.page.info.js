@@ -5,7 +5,7 @@ define(function(require, exports, module) {
     	
     require('jquery.field')($);
    	
-   	var page_id = Fun.getUrlParam("id");
+//   	var page_id = Fun.getUrlParam("id");
 	
 	// var model = {
 		// page_name			: 	'#js_page_name',			//页面标题		
@@ -26,7 +26,7 @@ define(function(require, exports, module) {
 			data: {
 				table: "tb_page",
 				value: page_obj,
-				where:"page_id = "+page_id
+				where:"page_id = "+ Fun.getUrlParam("page_id")
 			}
 		};
 		return obj;

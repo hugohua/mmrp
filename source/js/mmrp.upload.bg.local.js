@@ -55,7 +55,7 @@ define(function(require, exports, module) {
 			bg_rp ={},
 			
 			db_arr = [],											//用于存放 存到DB的数据
-			db_rp = []
+			db_rp = [],
 			$rp_img = $("img:last",model.upload_bg),				//平铺图片
 			$bg_img = $("img",model.upload_list);					//内容图片
 		
@@ -222,7 +222,7 @@ define(function(require, exports, module) {
 		sortable:function(){
 			$(model.drag_bg_ul).sortable({
 				placeholder: "ui-state-highlight",
-				connectWith: model.drag_bg_ul
+//				connectWith: model.drag_bg_ul
 			});
 		},
 		
@@ -305,11 +305,11 @@ define(function(require, exports, module) {
 		 * 初始化 
 		 */
 		init:function(){
-			this.sortable();
+//			this.sortable();
 			this.delImg();
 			this.colorPicker();
-			this.createUploader(),
-			this.createUploaderForOnline(),
+			this.createUploader();
+			this.createUploaderForOnline();
 			this.submitData();
 		}
 		
