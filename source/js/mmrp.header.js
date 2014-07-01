@@ -2,6 +2,7 @@ define(function(require, exports, module) {
     
     var $ = require('jquery'),
     	c = require("./mmrp.config.user");
+
 	exports.adminInit=function(){
 
 		var header='<section><h1>MMRP</h1><ul class="mod_nav"><li><a href="'+c.root+'select_tp.htm">新建流程</a></li><li><a href="'+c.root+'query.htm">流水查询</a></li><li><a href="'+c.root+'admin/layout_add.html" id="js_admin" style="display:none;">高级功能</a><i class="arrow"></i></li></ul><div class="mod_user">[ <span id="js_login_user_name"></span> | <a href="'+c.root+'oa_login.php" id="js_logout" title="注销退出系统">注销</a> ]</div></section><ul class="mod_nav_sub"><li><a '+ (exports.curpage("system.html")?'class="current"':'') +' href="'+c.root+'admin/system.html">系统设置</a></li><li><a '+ (exports.curpage("layout_add.html")?'class="current"':'') +' href="'+c.root+'admin/layout_add.html">录入模板</a></li><li><a '+ (exports.curpage("mod.html")?'class="current"':'') +' href="'+c.root+'admin/mod.html">新增组件</a></li><li><a '+ (exports.curpage("/list.html")?'class="current"':'') +' href="'+c.root+'admin/list.html">查看列表</a></li><li><a '+ (exports.curpage("userlist.html")?'class="current"':'') +' href="'+c.root+'admin/userlist.html">用户权限</a></li><li><a '+ (exports.curpage("statistics.html")?'class="current"':'') +' href="'+c.root+'admin/statistics.html">统计查询</a></li></ul>';

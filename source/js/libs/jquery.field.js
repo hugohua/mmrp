@@ -151,7 +151,7 @@
 	
 	// gets the value of a select element
 	var getOptionVal = function (el){
-		 return jQuery.browser.msie && !(el.attributes['value'].specified) ? el.text : el.value;
+		 return el.value;
 	};
 	
 	// checks to see if a value exists in an array

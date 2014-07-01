@@ -14,7 +14,7 @@ define(function(require, exports, module) {
         BoxStyle = require('./mmrp.mod.box.style'),
         BoxJson = require('./mmrp.mod.box.jsonp'),
         ModList = require('./mmrp.tablist'),
-        UploadBg = require('./mmrp.upload.bg');
+        UploadBg = require('./mmrp.upload.bg'),
         PageSetting = require('./mmrp.page.setting'),
         Preview = require('./mmrp.preview'),
         Draft = require('./mmrp.save.draft'),

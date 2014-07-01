@@ -1,5 +1,6 @@
 define([], function() { return function(jQuery) {
-  
+
+
 /**code start**/
 // jQuery Context Menu Plugin
 //

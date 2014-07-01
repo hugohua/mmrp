@@ -30,12 +30,11 @@
 		'bootstrap.tab':'bootstrap-tab',
 		'bootstrap.tooltip':'bootstrap-tooltip',
 		'bootstrap.dropdown':'bootstrap-dropdown',
-		'bootstrap.tooltip':'bootstrap-tooltip',
 		//localStore
 		'localStore':'localStore'
-		
-		
-		
+
+
+
 	};
 
 	seajs.config({
@@ -43,7 +42,7 @@
 		alias : alias,
 		//时间截
 		map : [
-			[ /^(.*\.(?:css|js))(.*)$/i, '$1?20121220' ],
+//			[ /^(.*\.(?:css|js))(.*)/i, '$1?20121220' ],
 			[  /^(.*mmrp.config.localstore\.(?:js))(.*)$/i, '$1?' + new Date().getTime() ]	//禁止缓存
 		],
 		debug : 0
@@ -79,7 +78,7 @@ define(function(require, exports) {
 		require.async(['./mmrp.header','./' + name] , function(header,mod) {
 			if(name.indexOf('admin') !== -1) header.adminInit();
 			else header.userInit();
-			
+
 			if (mod && mod.init) {
 				//如果有init函数，初始化时则执行init();
 				mod.init();

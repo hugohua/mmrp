@@ -3,7 +3,8 @@ define(function(require, exports, module) {
     var $ = require('jquery'),
     	BoxSource = require('./mmrp.mod.source.edit'),
     	BoxFun = require('./mmrp.mod.box.func');
-    
+
+    require('jquery.browser')($);
    	require('jquery.contextMenu')($);
    	
    	exports.contextMenu = function($dom){
