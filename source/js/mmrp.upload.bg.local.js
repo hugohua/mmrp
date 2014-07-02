@@ -221,7 +221,7 @@ define(function(require, exports, module) {
 		 */
 		sortable:function(){
 			$(model.drag_bg_ul).sortable({
-				placeholder: "ui-state-highlight",
+				placeholder: "ui-state-highlight"
 //				connectWith: model.drag_bg_ul
 			});
 		},

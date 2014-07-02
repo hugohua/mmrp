@@ -42,6 +42,7 @@ define(function(require, exports, module) {
     
     
     exports.setPageDataById = function(page_id,data){
+        console.log(data,'data');
     	localStore.setItem(ls.page_info_pre + page_id,data,1);
     };
     

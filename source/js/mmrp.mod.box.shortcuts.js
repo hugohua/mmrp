@@ -111,9 +111,12 @@ define(function(require, exports, module) {
 			{key:"shift+s",method:function(){
 				$('.js_save_draft_btn').eq(0).trigger('click');
 			}},
-			{key:"shift+b",method:function(){
-				$('#js_shift_b').trigger('click');
-			}},
+            {key:"shift+b",method:function(){
+                $('#js_shift_b').trigger('click');
+            }},
+            {key:"shift+i",method:function(){
+                $('#js_shift_i').trigger('click');
+            }},
 			{key:"shift+e",method:function(){
 				$('#js_shift_e').trigger('click');
 			}},

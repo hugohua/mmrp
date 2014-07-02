@@ -23,7 +23,7 @@ define(function(require, exports, module) {
         //Events
         PopModals = require('./mmrp.mod.modals'),
         //Page
-        Create = require('./mmrp.create');
+        BaseInfo = require('./mmrp.mod.base');
     
    	
    	require('jquery.contenteditable')($);
@@ -152,7 +152,7 @@ define(function(require, exports, module) {
 	var showPageCtrl=function(){
 		$("#pagectrl").html('<a href="javascript:;" class="mmrp_icon_prev" title="撤销">撤销</a><a href="javascript:;" class="mmrp_icon_next" title="重做">重做</a><a href="javascript:;" id="js_show_line" class="mmrp_icon_grid checked" title="显示网格线">网格</a><a href="javascript:;" id="js_show_assist" class="mmrp_icon_cursor checked" title="显示鼠标辅助线">鼠标辅助线</a><a href="javascript:;" id="js_show_cuts_link" class="mmrp_icon_cursor checked" title="显示快捷键">显示快捷键</a>');
 
-		$("#mod_nav_sub").html('<ul class="mod_nav_sub"><li><a title="快捷键（Ctrl+B）" data-toggle="modal"  class="js_pop_btn" href="#js_mod_upload" id="js_shift_b">背景上传(B)</a></li><li><a title="快捷键（Ctrl+E）" data-toggle="modal"  class="js_pop_btn" href="#js_mod_config" id="js_shift_e">配置修改(E)</a></li><li><a title="快捷键（Ctrl+Q）" id="js_preview_btn" href="javascript:;">预览效果(Q)</a></li><li id="js_drop_list"><a href="javascript:;" class="js_save_draft_btn">保存草稿(S)</a><i class="arrow"></i><ul class="mod_nav_child"><li><a title="快捷键（Shift+S）" class="js_save_draft_btn" href="javascript:;">保存草稿(S)</a></li><li><a id="js_save_template_btn" href="javascript:;">保存模板</a></li></ul></li><li><a class="dis_op" id="js_publish_btn" href="javascript:;">内容发布</a></li></ul>');
+		$("#mod_nav_sub").html('<ul class="mod_nav_sub"><li><a title="快捷键（Ctrl+B）" data-toggle="modal"  class="js_pop_btn" href="#J_mod_baseinfo" id="js_shift_i">页面信息(I)</a></li><li><a title="快捷键（Ctrl+B）" data-toggle="modal"  class="js_pop_btn" href="#js_mod_upload" id="js_shift_b">背景上传(B)</a></li><li><a title="快捷键（Ctrl+E）" data-toggle="modal"  class="js_pop_btn" href="#js_mod_config" id="js_shift_e">配置修改(E)</a></li><li><a title="快捷键（Ctrl+Q）" id="js_preview_btn" href="javascript:;">预览效果(Q)</a></li><li id="js_drop_list"><a href="javascript:;" class="js_save_draft_btn">保存草稿(S)</a><i class="arrow"></i><ul class="mod_nav_child"><li><a title="快捷键（Shift+S）" class="js_save_draft_btn" href="javascript:;">保存草稿(S)</a></li><li><a id="js_save_template_btn" href="javascript:;">保存模板</a></li></ul></li><li><a class="dis_op" id="js_publish_btn" href="javascript:;">内容发布</a></li></ul>');
 	}   
 
 	/**
@@ -174,7 +174,9 @@ define(function(require, exports, module) {
 		initTemplate();
 		
 		ModList.init();
-		
+        //基本信息配置
+        BaseInfo.init();
+
 		PageSetting.init();
 		Preview.init();
 		Draft.init();
@@ -193,8 +195,6 @@ define(function(require, exports, module) {
 		$('body').bind('contextmenu', function(){
 			return false;
 		});
-        //新建
-        Create.init();
 	};
     
     

@@ -3,7 +3,6 @@ define(function(require, exports, module) {
     var $ = require('jquery'),
     	Fun = require('./mmrp.func'),
     	Mustache = require('mustache'),
-    	c = require('./mmrp.config.user'),
     	localStore = require('./mmrp.localstore'),
     	PageInfo = require('./mmrp.page.info'),
     	RestApi = require('./mmrp.rest');
@@ -28,7 +27,7 @@ define(function(require, exports, module) {
 		RestApi.getPageById(page_id).success(function(data){
 			if(data && data.data && data.data.value){
 				PageInfo.setPageInfo(data.data.value);
-			};
+			}
 		})
 	};
 	
@@ -51,7 +50,6 @@ define(function(require, exports, module) {
 		var tpl = $('#js_type_tmpl').html(),
 			html = Mustache.to_html(tpl, data);
 		$('#js_page_type').append(html);
-        console.log(html,'html');
 	};
 	
 	
